@@ -1,26 +1,42 @@
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
-import json
+from fastapi import APIRouter, status
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
-@csrf_exempt
-@require_POST
-def invoice_deleted_webhook(request):
-    payload = json.loads(request.body)
-    
+router = APIRouter()
+
+
+class InvoiceDeletePayload(BaseModel):
+    _id: str
+    status: str | None = None
+    invoiceNumber: str | None = None
+    amountDue: str | None = None
+
+
+@router.post("/webhooks/invoice/delete", status_code=status.HTTP_200_OK)
+def invoice_deleted_webhook(payload: InvoiceDeletePayload):
+    """
+    FastAPI endpoint: Called whenever an invoice is deleted via webhook.
+    Receives invoice data as JSON and processes it.
+    """
     # Extract relevant information from the payload
-    invoice_id = payload.get('_id')
-    status = payload.get('status')
-    invoice_number = payload.get('invoiceNumber')
-    amount_due = payload.get('amountDue')
-    
+    invoice_id = payload._id
+    status_ = payload.status
+    invoice_number = payload.invoiceNumber
+    amount_due = payload.amountDue
+
     # Process the deleted invoice
     # Add your business logic here, e.g., updating database, sending notifications, etc.
-    
+
     # Example: Print some information about the deleted invoice
     print(f"Invoice {invoice_number} (ID: {invoice_id}) has been deleted.")
-    print(f"Status: {status}")
+    print(f"Status: {status_}")
     print(f"Amount due: {amount_due}")
-    
-    # Return a success response
-    return HttpResponse("Webhook received successfully", status=200)
+
+    return JSONResponse(
+        content={"message": "Invoice deleted processed", "invoiceId": invoice_id}
+    )
+
+
+# To use this router, include it in your FastAPI app:
+# from .webhooks.invoice import delete
+# app.include_router(delete.router)

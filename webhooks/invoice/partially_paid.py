@@ -1,6 +1,8 @@
-from typing import List, Dict, Any
 from datetime import datetime
+from typing import Any, Dict, List
+
 from pydantic import BaseModel, Field
+
 
 class Address(BaseModel):
     countryCode: str

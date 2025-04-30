@@ -1,6 +1,11 @@
-from typing import List, Dict, Optional
-from pydantic import BaseModel, Field
 from datetime import datetime
+from typing import Dict, List
+
+from fastapi import APIRouter, status
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
+
+router = APIRouter()
 
 class BusinessDetails(BaseModel):
     name: str
@@ -72,72 +77,16 @@ class Invoice(BaseModel):
     updatedAt: datetime
     totalSummary: TotalSummary
 
+@router.post("/webhooks/invoice/paid", status_code=status.HTTP_200_OK)
 def handle_paid_invoice(invoice: Invoice):
     """
-    Called whenever an invoice is paid
+    FastAPI endpoint: Called whenever an invoice is paid via webhook.
+    Receives invoice data as JSON and processes it.
     """
-    # Process the paid invoice here
-    print(f"Invoice {invoice.invoiceNumber} has been paid.")
-    print(f"Amount paid: {invoice.amountPaid} {invoice.currency}")
-    print(f"Customer: {invoice.contactDetails.name}")
+    # TODO: Add business logic for handling a paid invoice
+    # Example: update database, notify users, etc.
+    return JSONResponse(content={"message": "Invoice processed", "invoiceId": invoice._id})
 
-# Example usage
-example_invoice = Invoice(
-    _id="6578278e879ad2646715ba9c",
-    status="paid",
-    liveMode=False,
-    amountPaid=999,
-    altId="6578278e879ad2646715ba9c",
-    altType="location",
-    name="New Invoice",
-    businessDetails=BusinessDetails(
-        name="ABC Corp.",
-        address="9931 Beechwood, TX",
-        phoneNo="+1-214-559-6993",
-        website="wwww.example.com",
-        logoUrl="https://example.com/logo.png",
-        customValues=["string"]
-    ),
-    invoiceNumber="19",
-    currency="USD",
-    contactDetails=ContactDetails(
-        id="6578278e879ad2646715ba9c",
-        phoneNo="+1-214-559-6993",
-        email="alex@example.com",
-        customFields=["string"],
-        name="Alex",
-        address=Address(
-            countryCode="US",
-            addressLine1="9931 Beechwood",
-            addressLine2="Beechwood",
-            city="St. Houston",
-            state="TX",
-            postalCode="559-6993"
-        ),
-        additionalEmails=[AdditionalEmail(email="alex@example.com")],
-        companyName="ABC Corp."
-    ),
-    issueDate="2023-01-01",
-    dueDate="2023-01-01",
-    discount=Discount(type="percentage", value=10),
-    invoiceItems=[
-        InvoiceItem(
-            taxes=[],
-            _id="c6tZZU0rJBf30ZXx9Gli",
-            productId="c6tZZU0rJBf30ZXx9Gli",
-            priceId="c6tZZU0rJBf30ZXx9Gli",
-            currency="USD",
-            name="Macbook Pro",
-            qty=1,
-            amount=999
-        )
-    ],
-    total=999,
-    title="INVOICE",
-    amountDue=0,
-    createdAt=datetime.fromisoformat("2023-12-12T09:27:42.355Z"),
-    updatedAt=datetime.fromisoformat("2023-12-12T09:27:42.355Z"),
-    totalSummary=TotalSummary(subTotal=999, discount=0)
-)
-
-handle_paid_invoice(example_invoice)
+# To use this router, include it in your FastAPI app:
+# from .webhooks.invoice import paid
+# app.include_router(paid.router)
