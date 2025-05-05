@@ -1,17 +1,18 @@
-from typing import Dict, Any, Optional
-import httpx
 import logging
+from typing import Any
+
+import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
 async def get_calendar_events(
-    query_params: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    query_params: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get calendar events from the Go High Level API.
-    
+      
     Args:
         query_params: Dictionary containing query parameters for filtering events
         headers: Dictionary containing Authorization and Version headers

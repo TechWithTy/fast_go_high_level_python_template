@@ -1,6 +1,7 @@
 from typing import Dict, Any
 import httpx
 import logging
+from app.caching.utils.redis_cache import invalidate_cache
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
@@ -8,7 +9,8 @@ API_VERSION = "2021-07-28"
 async def delete_sub_account(
     location_id: str,
     headers: Dict[str, str],
-    delete_twilio_account: bool = False
+    delete_twilio_account: bool = False,
+    cache_key_prefix: str = "ghl:subaccounts"
 ) -> Dict[str, Any]:
     """
     Delete a Sub-Account (Formerly Location) from the Agency.
@@ -17,6 +19,7 @@ async def delete_sub_account(
         location_id: The ID of the location to delete
         headers: Dictionary containing Authorization and Version headers
         delete_twilio_account: Boolean to indicate whether to delete Twilio Account or not
+        cache_key_prefix: Prefix for cache keys
 
     Returns:
         Dict containing the API response
@@ -46,6 +49,11 @@ async def delete_sub_account(
         async with httpx.AsyncClient() as client:
             response = await client.delete(url, headers=request_headers, params=params)
             response.raise_for_status()
+            
+            # Invalidate relevant caches
+            await invalidate_cache(f"{cache_key_prefix}:{location_id}")
+            await invalidate_cache(f"{cache_key_prefix}:list")
+            
             return response.json()
     except httpx.HTTPStatusError as e:
         logging.error(f"HTTP error occurred: {e}")
