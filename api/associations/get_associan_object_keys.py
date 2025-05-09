@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,10 +6,10 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_association_by_object_key(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     object_key: str,
-    location_id: Optional[str] = None
-) -> Dict[str, Any]:
+    location_id: str | None
+) -> dict[str, Any]:
     """
     Get association by object keys like contacts, custom objects and opportunities.
     

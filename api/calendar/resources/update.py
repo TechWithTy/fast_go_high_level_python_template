@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import requests
 
 def update_calendar_resource(
@@ -7,13 +7,13 @@ def update_calendar_resource(
     access_token: str,
     location_id: str,
     name: str,
-    description: Optional[str] = None,
-    quantity: Optional[int] = None,
-    out_of_service: Optional[int] = None,
-    capacity: Optional[int] = None,
-    calendar_ids: Optional[List[str]] = None,
+    description: str | None,
+    quantity: int | None,
+    out_of_service: int | None,
+    capacity: int | None,
+    calendar_ids: list[str] | None = None,
     is_active: bool = True
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update a calendar resource by ID in Go High Level.
     
@@ -31,7 +31,7 @@ def update_calendar_resource(
         is_active: Whether the resource is active
         
     Returns:
-        Dict: The updated calendar resource data
+        dict: The updated calendar resource data
     """
     url = f"https://services.leadconnectorhq.com/calendars/resources/{resource_type}/{resource_id}"
     

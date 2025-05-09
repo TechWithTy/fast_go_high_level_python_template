@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,11 +6,11 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def delete_media(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     media_id: str,
     alt_id: str,
     alt_type: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Delete a specific file or folder from the media library.
 

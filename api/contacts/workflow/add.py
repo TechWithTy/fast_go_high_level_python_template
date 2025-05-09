@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def add_contact_to_workflow(
     contact_id: str,
     workflow_id: str,
-    headers: Dict[str, str],
-    event_start_time: Optional[str] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    event_start_time: str | None
+) -> dict[str, Any]:
     """
     Add a contact to a workflow in Go High Level.
     
@@ -21,7 +21,7 @@ async def add_contact_to_workflow(
         event_start_time: Optional start time for the workflow event in ISO format (e.g. "2021-06-23T03:30:00+01:00")
     
     Returns:
-        Dict containing the API response
+        dict containing the API response
     
     Raises:
         ValueError: If required headers are missing or invalid

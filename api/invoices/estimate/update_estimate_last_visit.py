@@ -1,10 +1,10 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def update_estimate_last_visited(headers: Dict[str, str], estimate_id: str) -> Dict[str, Any]:
+async def update_estimate_last_visited(headers: dict[str, str], estimate_id: str) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/stats/last-visited-at"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

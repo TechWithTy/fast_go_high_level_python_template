@@ -1,11 +1,11 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
 async def create_calendar_group(
-    group_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    group_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Create a calendar group in Go High Level.
     

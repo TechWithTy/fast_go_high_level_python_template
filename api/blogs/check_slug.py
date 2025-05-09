@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,11 +6,11 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def check_url_slug(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     url_slug: str,
-    post_id: Optional[str] = None
-) -> Dict[str, Any]:
+    post_id: str | None
+) -> dict[str, Any]:
     """
     Check if a blog post URL slug exists.
 

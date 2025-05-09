@@ -1,5 +1,5 @@
 # backend/apps/go_high_level/api/associations/delete.py
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-07-28"
 
 async def delete_association(
     association_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete a USER_DEFINED Association By Id.
     Deleting an association will also remove all the relations for that association.

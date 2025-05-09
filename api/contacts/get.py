@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_contact(contact_id: str, bearer_token: str) -> Dict[Any, Any]:
+async def get_contact(contact_id: str, bearer_token: str) -> dict[Any, Any]:
     """
     Get a contact by ID from the Go High Level API.
     
@@ -14,7 +14,7 @@ async def get_contact(contact_id: str, bearer_token: str) -> Dict[Any, Any]:
         bearer_token: The bearer token for API authorization
         
     Returns:
-        Dict containing the contact information
+        dict containing the contact information
     """
     url = f"{API_BASE_URL}/contacts/{contact_id}"
     

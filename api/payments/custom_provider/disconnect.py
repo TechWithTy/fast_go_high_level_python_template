@@ -1,20 +1,20 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def disconnect_custom_provider(headers: Dict[str, str], location_id: str, live_mode: bool) -> Dict[str, Any]:
+async def disconnect_custom_provider(headers: dict[str, str], location_id: str, live_mode: bool) -> dict[str, Any]:
     """
     Disconnect an existing payment config for a given location.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         location_id (str): The ID of the location.
         live_mode (bool): Whether the config is for test mode or live mode.
 
     Returns:
-        Dict[str, Any]: The response data from the API.
+        dict[str, Any]: The response data from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

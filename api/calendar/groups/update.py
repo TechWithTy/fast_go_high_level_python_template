@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-04-15"
 
 async def update_calendar_group(
     group_id: str,
-    group_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    group_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a calendar group in Go High Level.
     

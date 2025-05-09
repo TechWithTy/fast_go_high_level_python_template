@@ -1,8 +1,8 @@
 import httpx
 import logging
-from typing import Dict, Any
+from typing , Any
 
-async def get_business(business_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_business(business_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get business information from Go High Level API.
     

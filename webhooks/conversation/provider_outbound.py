@@ -1,4 +1,4 @@
-from typing import List, Union, Optional
+from typing  Union, Optional
 from dataclasses import dataclass
 
 @dataclass
@@ -21,15 +21,15 @@ class ConversationProviderOutboundMessage:
     location_id: str
     message_id: str
     type: str
-    attachments: List[str]
+    attachments: list[str]
     user_id: str
-    email_message_id: Optional[str] = None
-    message: Optional[str] = None
-    phone: Optional[str] = None
-    email_to: Optional[List[str]] = None
-    email_from: Optional[str] = None
-    html: Optional[str] = None
-    subject: Optional[str] = None
+    email_message_id: str | None
+    message: str | None
+    phone: str | None
+    email_to: list[str] | None = None
+    email_from: str | None
+    html: str | None
+    subject: str | None
 
     @classmethod
     def from_dict(cls, data: dict) -> 'ConversationProviderOutboundMessage':

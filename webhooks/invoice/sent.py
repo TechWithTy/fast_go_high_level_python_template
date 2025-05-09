@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing  dict, Any
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -8,7 +8,7 @@ class BusinessDetails(BaseModel):
     phoneNo: str
     website: str
     logoUrl: str
-    customValues: List[str]
+    customValues: list[str]
 
 class Address(BaseModel):
     countryCode: str
@@ -25,10 +25,10 @@ class ContactDetails(BaseModel):
     id: str
     phoneNo: str
     email: str
-    customFields: List[str]
+    customFields: list[str]
     name: str
     address: Address
-    additionalEmails: List[AdditionalEmail]
+    additionalEmails: list[AdditionalEmail]
     companyName: str
 
 class Discount(BaseModel):
@@ -36,7 +36,7 @@ class Discount(BaseModel):
     value: float
 
 class InvoiceItem(BaseModel):
-    taxes: List[Any]
+    taxes: list[Any]
     _id: str
     productId: str
     priceId: str
@@ -64,7 +64,7 @@ class InvoiceSentWebhook(BaseModel):
     issueDate: str
     dueDate: str
     discount: Discount
-    invoiceItems: List[InvoiceItem]
+    invoiceItems: list[InvoiceItem]
     total: float
     title: str
     amountDue: float
@@ -72,12 +72,12 @@ class InvoiceSentWebhook(BaseModel):
     updatedAt: datetime
     totalSummary: TotalSummary
 
-def handle_invoice_sent(data: Dict[str, Any]) -> None:
+def handle_invoice_sent(data: dict[str, Any]) -> None:
     """
     Handle the webhook event for when an invoice is sent.
 
     Args:
-        data (Dict[str, Any]): The webhook payload data.
+        data (dict[str, Any]): The webhook payload data.
 
     Returns:
         None

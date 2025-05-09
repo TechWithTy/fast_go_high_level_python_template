@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+
 
 class UserPermissions(BaseModel):
     adwordsReportingEnabled: bool = Field(default=False)
@@ -42,8 +42,8 @@ class UserPermissions(BaseModel):
 
 class UserCreate(BaseModel):
     type: str = Field(..., description="Type of the webhook event")
-    locationId: Optional[str] = Field(None, description="ID of the location (for sub-account user)")
-    companyId: Optional[str] = Field(None, description="ID of the company (for agency user)")
+    locationId: str | None = Field(None, description="ID of the location (for sub-account user)")
+    companyId: str | None = Field(None, description="ID of the company (for agency user)")
     id: str = Field(..., description="Unique identifier for the user")
     firstName: str = Field(..., description="First name of the user")
     lastName: str = Field(..., description="Last name of the user")
@@ -52,7 +52,7 @@ class UserCreate(BaseModel):
     extension: str = Field(..., description="Extension of the user's phone number")
     role: str = Field(..., description="Role of the user")
     permissions: UserPermissions = Field(..., description="Permissions of the user")
-    locations: Optional[List[str]] = Field(None, description="List of location IDs (for agency user)")
+    locations: list[str] | None = Field(None, description="list of location IDs (for agency user)")
 
     class Config:
         allow_population_by_field_name = True

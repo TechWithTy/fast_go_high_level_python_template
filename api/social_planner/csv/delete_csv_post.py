@@ -1,15 +1,15 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def delete_csv_post(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     csv_id: str,
     post_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Delete a CSV post.
 

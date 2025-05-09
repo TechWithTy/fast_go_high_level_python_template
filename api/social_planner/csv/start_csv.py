@@ -1,15 +1,15 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def start_csv_finalize(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     csv_id: str,
     user_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Start CSV finalization process.
 

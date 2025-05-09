@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def update_product_price(
     product_id: str,
     price_id: str,
-    price_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    price_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update Price by ID for a Product.
 

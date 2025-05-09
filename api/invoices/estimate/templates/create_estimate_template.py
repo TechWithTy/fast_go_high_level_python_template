@@ -1,26 +1,26 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_estimate_template(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     name: str,
-    business_details: Dict[str, Any],
+    business_details: dict[str, Any],
     currency: str,
-    items: List[Dict[str, Any]],
+    items: list[dict[str, Any]],
     live_mode: bool = True,
-    discount: Optional[Dict[str, Any]] = None,
-    terms_notes: Optional[str] = None,
-    title: Optional[str] = None,
+    discount: dict[str, Any] = None,
+    terms_notes: str | None,
+    title: str | None,
     automatic_taxes_enabled: bool = False,
-    meta: Optional[Dict[str, Any]] = None,
-    send_estimate_details: Optional[Dict[str, Any]] = None,
-    estimate_number_prefix: Optional[str] = None,
-    attachments: Optional[List[Dict[str, Any]]] = None
-) -> Dict[str, Any]:
+    meta: dict[str, Any] = None,
+    send_estimate_details: dict[str, Any] = None,
+    estimate_number_prefix: str | None,
+    attachments: Optional[list[dict[str, Any]]] = None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/template"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

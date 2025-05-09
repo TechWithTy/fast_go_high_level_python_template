@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from datetime import datetime
 from enum import Enum
 
@@ -31,7 +31,7 @@ class InboundMessage:
         self,
         type: str,
         location_id: str,
-        attachments: List[str],
+        attachments: list[str],
         body: str,
         contact_id: str,
         content_type: str,
@@ -41,18 +41,18 @@ class InboundMessage:
         message_type: MessageType,
         status: Status,
         message_id: str,
-        user_id: Optional[str] = None,
-        conversation_provider_id: Optional[str] = None,
-        call_duration: Optional[int] = None,
-        call_status: Optional[str] = None,
-        email_message_id: Optional[str] = None,
-        thread_id: Optional[str] = None,
-        provider: Optional[str] = None,
-        to: Optional[List[str]] = None,
-        cc: Optional[List[str]] = None,
-        bcc: Optional[List[str]] = None,
-        from_email: Optional[str] = None,
-        subject: Optional[str] = None
+        user_id: str | None,
+        conversation_provider_id: str | None,
+        call_duration: int | None,
+        call_status: str | None,
+        email_message_id: str | None,
+        thread_id: str | None,
+        provider: str | None,
+        to: list[str] | None = None,
+        cc: list[str] | None = None,
+        bcc: list[str] | None = None,
+        from_email: str | None,
+        subject: str | None
     ):
         self.type = type
         self.location_id = location_id

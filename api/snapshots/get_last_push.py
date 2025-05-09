@@ -1,26 +1,26 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_last_snapshot_push(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     snapshot_id: str,
     company_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get Latest Snapshot Push Status for a location id.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         location_id (str): The ID of the location.
         snapshot_id (str): The ID of the snapshot.
         company_id (str): The ID of the company.
 
     Returns:
-        Dict[str, Any]: The API response containing snapshot push status.
+        dict[str, Any]: The API response containing snapshot push status.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

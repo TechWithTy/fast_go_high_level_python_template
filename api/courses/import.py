@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,16 +8,16 @@ API_VERSION = "2021-07-28"
 async def import_courses(
     location_id: str,
     user_id: str,
-    products: List[Dict[str, Any]],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    products: list[dict[str, Any]],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Import courses through public channels.
     
     Args:
         location_id: The ID of the location
         user_id: The ID of the user
-        products: List of product objects to import
+        products: list of product objects to import
         headers: Dictionary containing Authorization header
         
     Returns:

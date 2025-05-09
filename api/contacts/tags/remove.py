@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,15 +7,15 @@ API_VERSION = "2021-07-28"
 
 async def remove_contact_tags(
     contact_id: str,
-    tags: List[str],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    tags: list[str],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Remove tags from a contact in Go High Level API.
     
     Args:
         contact_id: The ID of the contact
-        tags: List of tag names to remove from the contact
+        tags: list of tag names to remove from the contact
         headers: Dictionary containing Authorization and Version headers
         
     Returns:

@@ -1,17 +1,17 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_snapshot_share_link(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     snapshot_id: str,
     share_type: str,
     company_id: str,
-    relationship_number: Optional[str] = None,
-    share_location_id: Optional[str] = None
-) -> Dict[str, Any]:
+    relationship_number: str | None,
+    share_location_id: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/snapshots/share/link"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

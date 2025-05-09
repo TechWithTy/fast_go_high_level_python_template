@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,9 +8,9 @@ async def get_csv_post(
     access_token: str,
     location_id: str,
     csv_id: str,
-    limit: Optional[int] = None,
-    skip: Optional[int] = None
-) -> Dict[str, Any]:
+    limit: int | None,
+    skip: int | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/csv/{csv_id}"
     
     headers = {

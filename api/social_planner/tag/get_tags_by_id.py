@@ -1,17 +1,17 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_tags_by_ids(headers: Dict[str, str], location_id: str, tag_ids: List[str]) -> Dict[str, Any]:
+async def get_tags_by_ids(headers: dict[str, str], location_id: str, tag_ids: list[str]) -> dict[str, Any]:
     """
     Get tags by ids.
 
     Args:
         headers: Dictionary containing Authorization and Version headers.
         location_id: The ID of the location.
-        tag_ids: List of tag IDs to fetch.
+        tag_ids: list of tag IDs to fetch.
 
     Returns:
         A dictionary containing the API response.

@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,11 +7,11 @@ API_VERSION = "2021-07-28"
 
 async def get_blogs_by_location_id(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 4,
     skip: int = 0,
-    search_term: Optional[str] = None
-) -> Dict[str, Any]:
+    search_term: str | None
+) -> dict[str, Any]:
     """
     Get blogs by location ID from the Go High Level API.
 

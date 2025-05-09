@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -11,10 +11,10 @@ async def send_invoice(
     user_id: str,
     action: str,
     live_mode: bool,
-    headers: Dict[str, str],
-    sent_from: Optional[Dict[str, str]] = None,
-    auto_payment: Optional[Dict[str, Any]] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    sent_from:dict[str, str] | None,
+    auto_payment: dict[str, Any] = None
+) -> dict[str, Any]:
     """
     Send an invoice by invoice ID.
 

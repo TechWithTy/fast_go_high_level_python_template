@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,10 +9,10 @@ async def create_order_fulfillment(
     access_token: str,
     alt_id: str,
     alt_type: str,
-    trackings: List[Dict[str, str]],
-    items: List[Dict[str, Any]],
+    trackings: list[dict[str, str]],
+    items: list[dict[str, Any]],
     notify_customer: bool
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/payments/orders/{order_id}/fulfillments"
 
     headers = {

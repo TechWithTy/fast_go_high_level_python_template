@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-04-15"
 async def get_transcription(
     location_id: str,
     message_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get transcription for a message by ID from the Go High Level API.
     

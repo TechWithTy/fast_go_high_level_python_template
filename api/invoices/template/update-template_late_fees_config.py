@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,9 +8,9 @@ async def update_template_late_fees_config(
     template_id: str,
     alt_id: str,
     alt_type: str,
-    late_fees_config: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    late_fees_config: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/template/{template_id}/late-fees-configuration"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

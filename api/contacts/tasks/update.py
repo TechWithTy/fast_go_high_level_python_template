@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -8,13 +8,13 @@ API_VERSION = "2021-07-28"
 async def update_task(
     contact_id: str,
     task_id: str,
-    headers: Dict[str, str],
-    title: Optional[str] = None,
-    body: Optional[str] = None,
-    due_date: Optional[str] = None,
+    headers: dict[str, str],
+    title: str | None,
+    body: str | None,
+    due_date: str | None,
     completed: Optional[bool] = None,
-    assigned_to: Optional[str] = None
-) -> Dict[str, Any]:
+    assigned_to: str | None
+) -> dict[str, Any]:
     """
     Update a task for a contact in Go High Level.
     
@@ -29,7 +29,7 @@ async def update_task(
         assigned_to: Optional new ID of user assigned to the task
         
     Returns:
-        Dict containing the updated task data
+        dict containing the updated task data
     """
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")

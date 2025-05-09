@@ -1,11 +1,11 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 
 
 async def get_business_by_location(
     location_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, List[Dict[str, Any]]]:
+    headers: dict[str, str]
+) -> dict[str, list[dict[str, Any]]]:
     """
     Get businesses by location from the Go High Level API.
     

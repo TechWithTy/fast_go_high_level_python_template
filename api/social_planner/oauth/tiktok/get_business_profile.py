@@ -1,10 +1,10 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_tiktok_business_profile(headers: Dict[str, str], location_id: str, account_id: str) -> Dict[str, Any]:
+async def get_tiktok_business_profile(headers: dict[str, str], location_id: str, account_id: str) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/oauth/{location_id}/tiktok-business/accounts/{account_id}"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

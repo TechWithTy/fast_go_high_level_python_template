@@ -1,11 +1,11 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_all_notes(contact_id: str, headers: Dict[str, str]) -> Dict[str, List[Dict[str, Any]]]:
+async def get_all_notes(contact_id: str, headers: dict[str, str]) -> dict[str, list[dict[str, Any]]]:
     """
     Get all notes for a contact in Go High Level.
     

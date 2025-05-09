@@ -1,10 +1,10 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def update_user(user_id: str, user_data: Dict[str, Any], headers: Dict[str, str]) -> Dict[str, Any]:
+async def update_user(user_id: str, user_data: dict[str, Any], headers: dict[str, str]) -> dict[str, Any]:
     url = f"{API_BASE_URL}/users/{user_id}"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

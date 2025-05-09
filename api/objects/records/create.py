@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-07-28"
 
 async def create_record(
     schema_key: str,
-    record_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    record_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Create a Custom Object Record in Go High Level.
     

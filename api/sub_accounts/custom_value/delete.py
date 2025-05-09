@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-07-28"
 async def delete_custom_value(
     location_id: str,
     custom_value_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete a custom value for a specific location.
 
@@ -19,7 +19,7 @@ async def delete_custom_value(
         headers: Dictionary containing Authorization and Version headers
 
     Returns:
-        Dict containing the API response
+        dict containing the API response
 
     Raises:
         Exception: If the API request fails or if required headers are missing

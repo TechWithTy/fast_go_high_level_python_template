@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,10 +7,10 @@ API_VERSION = "2021-07-28"
 
 async def get_blog_categories(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 10,
     offset: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get all blog categories for a given location ID.
 

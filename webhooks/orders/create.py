@@ -1,19 +1,19 @@
-from typing import List, Dict, Optional
+from typing  dict, Optional
 from pydantic import BaseModel, Field
 from datetime import datetime
 
 class Variant(BaseModel):
     id: str
     name: str
-    options: List[Dict[str, str]]
+    options: list[dict[str, str]]
 
 class Product(BaseModel):
     _id: str
     name: str
-    description: Optional[str]
+    description: str | None
     availableInStore: bool
-    taxes: List[Dict[str, any]]
-    variants: List[Variant]
+    taxes: list[dict[str, any]]
+    variants: list[Variant]
 
 class Price(BaseModel):
     _id: str
@@ -21,7 +21,7 @@ class Price(BaseModel):
     type: str
     currency: str
     amount: float
-    variantOptionIds: List[str]
+    variantOptionIds: list[str]
 
 class Item(BaseModel):
     name: str
@@ -47,7 +47,7 @@ class Source(BaseModel):
     subType: str
     id: str
     name: str
-    meta: Dict[str, str]
+    meta: dict[str, str]
 
 class ContactSnapshot(BaseModel):
     id: str
@@ -62,7 +62,7 @@ class ContactSnapshot(BaseModel):
     city: str
     state: str
     postalCode: str
-    tags: List[str]
+    tags: list[str]
     country: str
     dateAdded: datetime
 
@@ -73,7 +73,7 @@ class Order(BaseModel):
     altId: str
     altType: str
     status: str
-    taxSummary: List[TaxSummary]
+    taxSummary: list[TaxSummary]
     fulfillmentStatus: str
     contactId: str
     currency: str
@@ -84,9 +84,9 @@ class Order(BaseModel):
     createdAt: datetime
     updatedAt: datetime
     contactSnapshot: ContactSnapshot
-    items: List[Item]
+    items: list[Item]
 
-def handle_order_create(order_data: Dict):
+def handle_order_create(order_data: dict):
     order = Order(**order_data)
     # Process the order here
     print(f"New order created: {order._id}")

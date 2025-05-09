@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,7 +6,7 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_product(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     name: str,
     location_id: str,
     product_type: str,
@@ -16,7 +16,7 @@ async def create_product(
     available_in_store: bool = None,
     medias: list = None,
     variants: list = None
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/products/"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

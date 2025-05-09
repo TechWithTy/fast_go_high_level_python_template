@@ -1,20 +1,20 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_user_by_location(headers: Dict[str, str], location_id: str) -> Dict[str, Any]:
+async def get_user_by_location(headers: dict[str, str], location_id: str) -> dict[str, Any]:
     """
     Get User by Location.
 
     Args:
-        headers (Dict[str, str]): The request headers containing the authorization token.
+        headers (dict[str, str]): The request headers containing the authorization token.
         location_id (str): The ID of the location.
 
     Returns:
-        Dict[str, Any]: The response containing user information.
+        dict[str, Any]: The response containing user information.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

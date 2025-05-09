@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,17 +6,17 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_invoice_templates(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location",
     limit: int = 10,
     offset: int = 0,
-    end_at: Optional[str] = None,
-    payment_mode: Optional[str] = None,
-    search: Optional[str] = None,
-    start_at: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    end_at: str | None,
+    payment_mode: str | None,
+    search: str | None,
+    start_at: str | None,
+    status: str | None
+) -> dict[str, Any]:
     """
     Get list of invoice templates.
     

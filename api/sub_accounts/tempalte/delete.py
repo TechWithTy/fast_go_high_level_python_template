@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-07-28"
 async def delete_template(
     location_id: str,
     template_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete an email/sms template for a specific location.
 
@@ -19,7 +19,7 @@ async def delete_template(
         headers: Dictionary containing Authorization and Version headers
 
     Returns:
-        Dict containing the API response
+        dict containing the API response
 
     Raises:
         ValueError: If the Authorization header is missing or invalid

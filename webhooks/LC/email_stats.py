@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional
+from typing  dict, Optional
 from datetime import datetime
 from pydantic import BaseModel, Field
 
@@ -15,7 +15,7 @@ class MessageHeaders(BaseModel):
     to: str
 
 class Message(BaseModel):
-    attachments: List[str]
+    attachments: list[str]
     headers: MessageHeaders
     size: int
 
@@ -47,9 +47,9 @@ class WebhookPayload(BaseModel):
     log_level: str = Field(..., alias="log-level")
     recipient: str
     recipient_domain: str = Field(..., alias="recipient-domain")
-    tags: List[str]
+    tags: list[str]
     recipient_provider: str = Field(..., alias="recipient-provider")
-    campaigns: List[str]
+    campaigns: list[str]
     delivery_status: DeliveryStatus = Field(..., alias="delivery-status")
     envelope: Envelope
 
@@ -59,12 +59,12 @@ class LCEmailStats(BaseModel):
     company_id: str = Field(..., alias="companyId")
     webhook_payload: WebhookPayload = Field(..., alias="webhookPayload")
 
-def process_lc_email_stats(data: Dict) -> LCEmailStats:
+def process_lc_email_stats(data: dict) -> LCEmailStats:
     """
     Process the incoming webhook data for LC Email Stats.
 
     Args:
-        data (Dict): The raw webhook payload.
+        data (dict): The raw webhook payload.
 
     Returns:
         LCEmailStats: A validated LCEmailStats object.

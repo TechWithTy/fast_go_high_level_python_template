@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from datetime import datetime
 from pydantic import BaseModel, Field
 
@@ -8,29 +8,29 @@ class Attachment(BaseModel):
 class OutboundMessage(BaseModel):
     type: str = "OutboundMessage"
     location_id: str
-    attachments: List[Attachment] = []
-    body: Optional[str] = None
+    attachments: list[Attachment] = []
+    body: str | None
     contact_id: str
-    content_type: Optional[str] = None
+    content_type: str | None
     conversation_id: str
     date_added: datetime
     direction: str
     message_type: str
-    status: Optional[str] = None
+    status: str | None
     message_id: str
-    user_id: Optional[str] = None
-    source: Optional[str] = None
-    conversation_provider_id: Optional[str] = None
-    call_duration: Optional[int] = None
-    call_status: Optional[str] = None
-    email_message_id: Optional[str] = None
-    thread_id: Optional[str] = None
-    provider: Optional[str] = None
-    to: Optional[List[str]] = None
-    cc: Optional[List[str]] = None
-    bcc: Optional[List[str]] = None
-    from_email: Optional[str] = Field(None, alias="from")
-    subject: Optional[str] = None
+    user_id: str | None
+    source: str | None
+    conversation_provider_id: str | None
+    call_duration: int | None
+    call_status: str | None
+    email_message_id: str | None
+    thread_id: str | None
+    provider: str | None
+    to: list[str] | None = None
+    cc: list[str] | None = None
+    bcc: list[str] | None = None
+    from_email: str | None = Field(None, alias="from")
+    subject: str | None
 
     class Config:
         allow_population_by_field_name = True

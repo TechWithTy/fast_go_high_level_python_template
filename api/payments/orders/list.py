@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,17 +8,17 @@ async def list_orders(
     access_token: str,
     alt_id: str,
     alt_type: str,
-    contact_id: Optional[str] = None,
-    end_at: Optional[str] = None,
-    funnel_product_ids: Optional[str] = None,
+    contact_id: str | None,
+    end_at: str | None,
+    funnel_product_ids: str | None,
     limit: int = 10,
-    location_id: Optional[str] = None,
+    location_id: str | None,
     offset: int = 0,
-    payment_mode: Optional[str] = None,
-    search: Optional[str] = None,
-    start_at: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    payment_mode: str | None,
+    search: str | None,
+    start_at: str | None,
+    status: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/payments/orders"
     
     headers = {

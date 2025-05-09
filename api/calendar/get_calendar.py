@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 async def get_calendar(
     calendar_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get calendar by ID from the Go High Level API.
     

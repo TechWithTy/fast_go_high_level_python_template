@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,11 +7,11 @@ API_VERSION = "2021-07-28"
 
 async def get_forms(
     location_id: str,
-    headers: Dict[str, str],
-    limit: Optional[int] = 10,
-    skip: Optional[int] = 0,
-    form_type: Optional[str] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    limit: int | None 10,
+    skip: int | None 0,
+    form_type: str | None
+) -> dict[str, Any]:
     """
     Get forms from the Go High Level API.
     

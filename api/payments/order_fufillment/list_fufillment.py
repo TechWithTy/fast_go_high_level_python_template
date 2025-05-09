@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,9 +9,9 @@ async def list_fulfillment(
     alt_id: str,
     alt_type: str,
     access_token: str,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
-    List all fulfillment history of an order.
+    list all fulfillment history of an order.
 
     Args:
         order_id: ID of the order that needs to be returned

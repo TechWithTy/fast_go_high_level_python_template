@@ -1,28 +1,28 @@
 import requests
-from typing import List, Dict, Optional
+from typing  dict, Optional
 from datetime import datetime
 
 def create_invoice_schedule(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str,
     name: str,
-    contact_details: Dict,
-    schedule: Dict,
+    contact_details: dict,
+    schedule: dict,
     live_mode: bool,
-    business_details: Dict,
+    business_details: dict,
     currency: str,
-    items: List[Dict],
+    items: list[dict],
     automatic_taxes_enabled: bool,
-    discount: Dict,
+    discount: dict,
     terms_notes: str,
     title: str,
-    tips_configuration: Dict,
-    late_fees_configuration: Dict,
+    tips_configuration: dict,
+    late_fees_configuration: dict,
     invoice_number_prefix: str,
-    payment_methods: Dict,
-    attachments: List[Dict]
-) -> Dict:
+    payment_methods: dict,
+    attachments: list[dict]
+) -> dict:
     url = "https://services.leadconnectorhq.com/invoices/schedule"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

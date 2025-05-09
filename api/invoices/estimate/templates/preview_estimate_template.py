@@ -1,15 +1,15 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def preview_estimate_template(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     template_id: str,
     alt_type: str = "location"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/template/preview"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

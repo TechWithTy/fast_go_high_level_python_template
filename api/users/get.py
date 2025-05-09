@@ -1,20 +1,20 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_user(user_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_user(user_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get user details from the Go High Level API.
 
     Args:
         user_id (str): The ID of the user to retrieve.
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
 
     Returns:
-        Dict[str, Any]: The user details.
+        dict[str, Any]: The user details.
 
     Raises:
         ValueError: If the Authorization header is missing or invalid.

@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def delete_custom_menu(custom_menu_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def delete_custom_menu(custom_menu_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Delete a custom menu by ID.
 
@@ -14,7 +14,7 @@ async def delete_custom_menu(custom_menu_id: str, headers: Dict[str, str]) -> Di
         headers: Dictionary containing Authorization and Version headers
 
     Returns:
-        Dict containing the API response
+        dict containing the API response
 
     Raises:
         Exception: If the API request fails or if required headers are missing

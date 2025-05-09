@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Any, Dict, List
+from typing import Any, dict, list
 
 from pydantic import BaseModel, Field
 
@@ -18,16 +18,16 @@ class BusinessDetails(BaseModel):
     phoneNo: str
     website: str
     logoUrl: str
-    customValues: List[str]
+    customValues: list[str]
 
 class ContactDetails(BaseModel):
     id: str
     phoneNo: str
     email: str
-    customFields: List[str]
+    customFields: list[str]
     name: str
     address: Address
-    additionalEmails: List[Dict[str, str]]
+    additionalEmails: list[dict[str, str]]
     companyName: str
 
 class Discount(BaseModel):
@@ -35,7 +35,7 @@ class Discount(BaseModel):
     value: float
 
 class InvoiceItem(BaseModel):
-    taxes: List[Any] = []
+    taxes: list[Any] = []
     _id: str
     productId: str
     priceId: str
@@ -63,7 +63,7 @@ class PartiallyPaidInvoice(BaseModel):
     issueDate: str
     dueDate: str
     discount: Discount
-    invoiceItems: List[InvoiceItem]
+    invoiceItems: list[InvoiceItem]
     total: float
     title: str
     amountDue: float

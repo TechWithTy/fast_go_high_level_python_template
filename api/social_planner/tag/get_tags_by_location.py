@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,12 +6,12 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_tags_by_location(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    limit: Optional[int] = None,
-    search_text: Optional[str] = None,
-    skip: Optional[int] = None
-) -> Dict[str, Any]:
+    limit: int | None,
+    search_text: str | None,
+    skip: int | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/tags"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

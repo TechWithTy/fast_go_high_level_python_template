@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,15 +7,15 @@ API_VERSION = "2021-07-28"
 
 async def remove_opportunity_followers(
     opportunity_id: str,
-    followers: List[str],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    followers: list[str],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Remove followers from an opportunity.
 
     Args:
         opportunity_id: The ID of the opportunity
-        followers: List of follower IDs to remove
+        followers: list of follower IDs to remove
         headers: Dictionary containing Authorization and Version headers
 
     Returns:

@@ -1,19 +1,19 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_snapshots(headers: Dict[str, str], company_id: str) -> List[Dict[str, Any]]:
+async def get_snapshots(headers: dict[str, str], company_id: str) -> list[dict[str, Any]]:
     """
     Get a list of all own and imported Snapshots.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         company_id (str): The company ID.
 
     Returns:
-        List[Dict[str, Any]]: A list of snapshot dictionaries.
+        list[dict[str, Any]]: A list of snapshot dictionaries.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

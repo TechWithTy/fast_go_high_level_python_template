@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,15 +6,15 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_survey_submissions(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    end_at: Optional[str] = None,
+    end_at: str | None,
     limit: int = 20,
     page: int = 1,
-    q: Optional[str] = None,
-    start_at: Optional[str] = None,
-    survey_id: Optional[str] = None
-) -> Dict[str, Any]:
+    q: str | None,
+    start_at: str | None,
+    survey_id: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/surveys/submissions"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

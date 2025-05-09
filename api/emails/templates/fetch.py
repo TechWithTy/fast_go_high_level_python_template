@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,18 +7,18 @@ API_VERSION = "2021-07-28"
 
 async def fetch_email_templates(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     archived: Optional[bool] = False,
-    builder_version: Optional[str] = "2",
-    limit: Optional[int] = 10,
-    name: Optional[str] = None,
-    offset: Optional[int] = 0,
-    origin_id: Optional[str] = None,
-    parent_id: Optional[str] = None,
-    search: Optional[str] = None,
-    sort_by_date: Optional[str] = "desc",
+    builder_version: str | None = "2",
+    limit: int | None 10,
+    name: str | None,
+    offset: int | None 0,
+    origin_id: str | None,
+    parent_id: str | None,
+    search: str | None,
+    sort_by_date: str | None = "desc",
     templates_only: Optional[bool] = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Fetch email templates from Go High Level.
     

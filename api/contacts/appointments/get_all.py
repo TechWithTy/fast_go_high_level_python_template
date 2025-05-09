@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,8 +7,8 @@ API_VERSION = "2021-07-28"
 
 async def get_all_appointments(
     contact_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get all appointments for a specific contact from the Go High Level API.
     

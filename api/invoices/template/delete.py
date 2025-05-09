@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def delete_invoice_template(
     template_id: str,
     alt_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_type: str = "location"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Delete an invoice template by template ID.
 

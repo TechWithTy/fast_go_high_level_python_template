@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,12 +8,12 @@ API_VERSION = "2021-04-15"
 async def list_calendar_resources(
     resource_type: str,
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 100,
     skip: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
-    List calendar resources by resource type and location ID from Go High Level API.
+    list calendar resources by resource type and location ID from Go High Level API.
     
     Args:
         resource_type: The type of resource ('equipments' or 'rooms')

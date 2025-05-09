@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,18 +7,18 @@ API_VERSION = "2021-07-28"
 
 async def get_email_campaigns(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     archived: Optional[bool] = None,
     campaigns_only: Optional[bool] = None,
-    email_status: Optional[str] = None,
-    limit: Optional[int] = 10,
+    email_status: str | None,
+    limit: int | None 10,
     limited_fields: Optional[bool] = None,
-    name: Optional[str] = None,
-    offset: Optional[int] = 0,
-    parent_id: Optional[str] = None,
+    name: str | None,
+    offset: int | None 0,
+    parent_id: str | None,
     show_stats: Optional[bool] = None,
-    status: Optional[str] = "active"
-) -> Dict[str, Any]:
+    status: str | None = "active"
+) -> dict[str, Any]:
     """
     Get email campaigns from the Go High Level API.
     

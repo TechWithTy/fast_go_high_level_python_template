@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,16 +8,16 @@ async def search_users(
     access_token: str,
     company_id: str,
     enabled_2way_sync: Optional[bool] = None,
-    ids: Optional[List[str]] = None,
+    ids: list[str] | None = None,
     limit: int = 25,
-    location_id: Optional[str] = None,
-    query: Optional[str] = None,
-    role: Optional[str] = None,
+    location_id: str | None,
+    query: str | None,
+    role: str | None,
     skip: int = 0,
-    sort: Optional[str] = None,
-    sort_direction: Optional[str] = None,
-    user_type: Optional[str] = None
-) -> Dict[str, Any]:
+    sort: str | None,
+    sort_direction: str | None,
+    user_type: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/users/search"
 
     headers = {

@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import json
 
@@ -7,16 +7,16 @@ API_VERSION = "2021-07-28"
 
 async def get_posts(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     post_type: str = "all",
-    accounts: Optional[str] = None,
+    accounts: str | None,
     skip: int = 0,
     limit: int = 10,
-    from_date: Optional[str] = None,
-    to_date: Optional[str] = None,
+    from_date: str | None,
+    to_date: str | None,
     include_users: bool = True,
     post_type_filter: str = "post"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/posts/list"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

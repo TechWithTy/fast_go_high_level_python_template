@@ -1,11 +1,11 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_links(headers: Dict[str, str], location_id: str) -> List[Dict[str, Any]]:
+async def get_links(headers: dict[str, str], location_id: str) -> list[dict[str, Any]]:
     """
     Get links from the Go High Level API.
 

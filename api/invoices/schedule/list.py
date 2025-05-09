@@ -1,28 +1,28 @@
 import httpx
-from typing import Dict, List, Optional
+from typing , list, Optional
 from datetime import datetime
 
 async def create_invoice_schedule(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str,
     name: str,
-    contact_details: Dict,
-    schedule: Dict,
+    contact_details: dict,
+    schedule: dict,
     live_mode: bool,
-    business_details: Dict,
+    business_details: dict,
     currency: str,
-    items: List[Dict],
+    items: list[dict],
     automatic_taxes_enabled: bool,
-    discount: Dict,
+    discount: dict,
     terms_notes: str,
     title: str,
-    tips_configuration: Dict,
-    late_fees_configuration: Dict,
+    tips_configuration: dict,
+    late_fees_configuration: dict,
     invoice_number_prefix: str,
-    payment_methods: Dict,
-    attachments: Optional[List[Dict]] = None
-) -> Dict:
+    payment_methods: dict,
+    attachments: list[dict] | None = None
+) -> dict:
     url = "https://services.leadconnectorhq.com/invoices/schedule"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

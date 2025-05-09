@@ -1,16 +1,16 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def list_products(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    limit: Optional[int] = 0,
-    offset: Optional[int] = 0,
-    search: Optional[str] = None
-) -> Dict[str, Any]:
+    limit: int | None 0,
+    offset: int | None 0,
+    search: str | None
+) -> dict[str, Any]:
     """
     Retrieve a paginated list of products.
 

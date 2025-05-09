@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-04-15"
 
 async def create_note(
     appointment_id: str,
-    note_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    note_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Create a note for an appointment in Go High Level.
     

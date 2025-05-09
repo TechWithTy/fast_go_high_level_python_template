@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_custom_field_by_id(field_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_custom_field_by_id(field_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get Custom Field / Folder By Id.
     Only supports Custom Objects and Company (Business) today.
@@ -15,7 +15,7 @@ async def get_custom_field_by_id(field_id: str, headers: Dict[str, str]) -> Dict
         headers: Dictionary containing Authorization and Version headers
         
     Returns:
-        Dict containing the custom field data
+        dict containing the custom field data
     """
     url = f"{API_BASE_URL}/custom-fields/{field_id}"
     

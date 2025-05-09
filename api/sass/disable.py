@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -6,20 +6,20 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
 async def disable_saas_for_locations(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     company_id: str,
-    location_ids: List[str]
-) -> Dict[str, Any]:
+    location_ids: list[str]
+) -> dict[str, Any]:
     """
     Disable SaaS for locations for given locationIds.
 
     Args:
         headers: Dictionary containing Authorization and Version headers
         company_id: The company ID
-        location_ids: List of location IDs to disable SaaS for
+        location_ids: list of location IDs to disable SaaS for
 
     Returns:
-        Dict containing the API response
+        dict containing the API response
 
     Raises:
         Exception: If the Authorization header is missing or invalid

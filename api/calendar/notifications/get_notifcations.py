@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,14 +7,14 @@ API_VERSION = "2021-04-15"
 
 async def get_calendar_notifications(
     calendar_id: str,
-    headers: Dict[str, str],
-    alt_id: Optional[str] = None,
-    alt_type: Optional[str] = "calendar",
+    headers: dict[str, str],
+    alt_id: str | None,
+    alt_type: str | None = "calendar",
     deleted: Optional[bool] = None,
     is_active: Optional[bool] = None,
-    limit: Optional[int] = 100,
-    skip: Optional[int] = 0
-) -> Dict[str, Any]:
+    limit: int | None 100,
+    skip: int | None 0
+) -> dict[str, Any]:
     """
     Get calendar notifications from the Go High Level API.
     

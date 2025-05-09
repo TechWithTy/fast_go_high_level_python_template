@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -10,8 +10,8 @@ async def send_typing_indicator(
     visitor_id: str,
     conversation_id: str,
     is_typing: bool,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Send typing indicator for live chat.
     

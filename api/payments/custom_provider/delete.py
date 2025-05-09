@@ -1,19 +1,19 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def delete_custom_provider(headers: Dict[str, str], location_id: str) -> Dict[str, Any]:
+async def delete_custom_provider(headers: dict[str, str], location_id: str) -> dict[str, Any]:
     """
     Delete an existing custom provider integration.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         location_id (str): The location ID.
 
     Returns:
-        Dict[str, Any]: The response data from the API.
+        dict[str, Any]: The response data from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

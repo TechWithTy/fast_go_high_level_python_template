@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def attach_linkedin_account(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     account_id: str,
     account_type: str,
@@ -14,7 +14,7 @@ async def attach_linkedin_account(
     avatar: str,
     urn: str,
     company_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/oauth/{location_id}/linkedin/accounts/{account_id}"
 
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

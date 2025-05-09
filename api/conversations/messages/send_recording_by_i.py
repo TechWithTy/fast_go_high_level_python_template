@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -9,25 +9,25 @@ async def send_new_message(
     conversation_id: str,
     message_type: str,
     contact_id: str,
-    headers: Dict[str, str],
-    message: Optional[str] = None,
-    html: Optional[str] = None,
-    subject: Optional[str] = None,
-    appointment_id: Optional[str] = None,
-    attachments: Optional[List[str]] = None,
-    email_from: Optional[str] = None,
-    email_to: Optional[str] = None,
-    email_cc: Optional[List[str]] = None,
-    email_bcc: Optional[List[str]] = None,
-    email_reply_mode: Optional[str] = None,
-    reply_message_id: Optional[str] = None,
-    template_id: Optional[str] = None,
-    thread_id: Optional[str] = None,
-    scheduled_timestamp: Optional[int] = None,
-    conversation_provider_id: Optional[str] = None,
-    from_number: Optional[str] = None,
-    to_number: Optional[str] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    message: str | None,
+    html: str | None,
+    subject: str | None,
+    appointment_id: str | None,
+    attachments: list[str] | None = None,
+    email_from: str | None,
+    email_to: str | None,
+    email_cc: list[str] | None = None,
+    email_bcc: list[str] | None = None,
+    email_reply_mode: str | None,
+    reply_message_id: str | None,
+    template_id: str | None,
+    thread_id: str | None,
+    scheduled_timestamp: int | None,
+    conversation_provider_id: str | None,
+    from_number: str | None,
+    to_number: str | None
+) -> dict[str, Any]:
     """
     Send a new message in a conversation.
     

@@ -1,11 +1,11 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_blog_post(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     title: str,
     location_id: str,
     blog_id: str,
@@ -20,7 +20,7 @@ async def create_blog_post(
     url_slug: str,
     canonical_link: str,
     published_at: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/blogs/posts"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

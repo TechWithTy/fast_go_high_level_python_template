@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,11 +6,11 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def update_association_by_id(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     association_id: str,
     first_object_label: str,
     second_object_label: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update association labels in Go High Level.
     

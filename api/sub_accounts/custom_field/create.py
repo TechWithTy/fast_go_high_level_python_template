@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -9,15 +9,15 @@ async def create_custom_field(
     location_id: str,
     name: str,
     data_type: str,
-    headers: Dict[str, str],
-    placeholder: Optional[str] = None,
-    accepted_format: Optional[List[str]] = None,
+    headers: dict[str, str],
+    placeholder: str | None,
+    accepted_format: list[str] | None = None,
     is_multiple_file: Optional[bool] = None,
-    max_number_of_files: Optional[int] = None,
-    text_box_list_options: Optional[List[Dict[str, Any]]] = None,
-    position: Optional[int] = None,
-    model: Optional[str] = None
-) -> Dict[str, Any]:
+    max_number_of_files: int | None,
+    text_box_list_options: Optional[list[dict[str, Any]]] = None,
+    position: int | None,
+    model: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/locations/{location_id}/customFields"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

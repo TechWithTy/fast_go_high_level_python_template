@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -6,23 +6,23 @@ API_VERSION = "2021-04-15"
 
 async def update_saas_subscription(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     subscription_id: str,
     customer_id: str,
     company_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update SaaS subscription for given locationId and customerId.
 
     Args:
         location_id (str): The ID of the location.
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         subscription_id (str): The ID of the subscription to update.
         customer_id (str): The ID of the customer.
         company_id (str): The ID of the company.
 
     Returns:
-        Dict[str, Any]: The response from the API.
+        dict[str, Any]: The response from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

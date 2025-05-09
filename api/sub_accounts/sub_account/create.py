@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,18 +7,18 @@ API_VERSION = "2021-07-28"
 
 
 async def create_sub_account(
-    headers: Dict[str, str], data: Dict[str, Any], api_version: str = "2021-07-28"
-) -> Dict[str, Any]:
+    headers: dict[str, str], data: dict[str, Any], api_version: str = "2021-07-28"
+) -> dict[str, Any]:
     """
     Create a Sub-Account (Formerly Location) based on the data provided.
 
     Args:
-        headers (Dict[str, str]): Headers containing the authorization token.
-        data (Dict[str, Any]): The data to create the sub-account with.
+        headers (dict[str, str]): Headers containing the authorization token.
+        data (dict[str, Any]): The data to create the sub-account with.
         api_version (str, optional): The API version to use. Defaults to "2021-07-28".
 
     Returns:
-        Dict[str, Any]: The response from the API containing the created sub-account information.
+        dict[str, Any]: The response from the API containing the created sub-account information.
 
     Raises:
         ValueError: If the Authorization header is missing or invalid.

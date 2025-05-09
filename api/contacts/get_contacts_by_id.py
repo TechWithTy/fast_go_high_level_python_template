@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,11 +8,11 @@ API_VERSION = "2021-07-28"
 async def get_contacts_by_business_id(
     business_id: str,
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 25,
-    query: Optional[str] = None,
+    query: str | None,
     skip: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get contacts by business ID.
     
@@ -25,7 +25,7 @@ async def get_contacts_by_business_id(
         skip: Number of results to skip (default: 0)
         
     Returns:
-        Dict containing contacts and count
+        dict containing contacts and count
     """
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")

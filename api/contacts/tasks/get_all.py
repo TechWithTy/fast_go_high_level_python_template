@@ -1,11 +1,11 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_all_tasks(contact_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_all_tasks(contact_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get all tasks for a specific contact from the Go High Level API.
     
@@ -14,7 +14,7 @@ async def get_all_tasks(contact_id: str, headers: Dict[str, str]) -> Dict[str, A
         headers: Dictionary containing Authorization and Version headers
         
     Returns:
-        Dict containing the tasks data
+        dict containing the tasks data
     """
     url = f"{API_BASE_URL}/contacts/{contact_id}/tasks"
     

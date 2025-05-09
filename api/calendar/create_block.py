@@ -1,11 +1,11 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
 async def create_block_slot(
-    block_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    block_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Create a block slot in a calendar in Go High Level.
     

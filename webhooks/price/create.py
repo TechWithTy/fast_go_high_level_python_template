@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -13,8 +13,8 @@ class Recurring(BaseModel):
 
 class Price(BaseModel):
     _id: str
-    membershipOffers: List[MembershipOffer]
-    variantOptionIds: List[str]
+    membershipOffers: list[MembershipOffer]
+    variantOptionIds: list[str]
     locationId: str
     product: str
     userId: str
@@ -25,9 +25,9 @@ class Price(BaseModel):
     recurring: Optional[Recurring]
     createdAt: datetime
     updatedAt: datetime
-    compareAtPrice: Optional[float]
+    compareAtPrice: float | None
     trackInventory: Optional[bool]
-    availableQuantity: Optional[int]
+    availableQuantity: int | None
     allowOutOfStockPurchases: bool
 
 def handle_price_create(price: Price):

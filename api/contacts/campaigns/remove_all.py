@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,8 +7,8 @@ API_VERSION = "2021-07-28"
 
 async def remove_all_campaigns(
     contact_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, bool]:
+    headers: dict[str, str]
+) -> dict[str, bool]:
     """
     Remove a contact from every campaign in Go High Level.
     

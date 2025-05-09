@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,15 +7,15 @@ API_VERSION = "2021-07-28"
 
 async def add_tags_to_contact(
     contact_id: str,
-    tags: List[str],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    tags: list[str],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Add tags to a contact in Go High Level.
     
     Args:
         contact_id: The ID of the contact to add tags to
-        tags: List of tag strings to add to the contact
+        tags: list of tag strings to add to the contact
         headers: Dictionary containing Authorization and Version headers
         
     Returns:

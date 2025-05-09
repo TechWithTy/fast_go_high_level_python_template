@@ -1,11 +1,11 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_custom_menu(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     title: str,
     url: str,
     icon_name: str,
@@ -14,11 +14,11 @@ async def create_custom_menu(
     show_on_location: bool = True,
     show_to_all_locations: bool = True,
     open_mode: str = "iframe",
-    locations: List[str] = None,
+    locations: list[str] = None,
     user_role: str = "all",
     allow_camera: bool = False,
     allow_microphone: bool = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")
 

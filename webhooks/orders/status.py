@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -15,7 +15,7 @@ class ContactSnapshot(BaseModel):
     city: str
     state: str
     postalCode: str
-    tags: List[str]
+    tags: list[str]
     country: str
     dateAdded: datetime
 
@@ -52,15 +52,15 @@ class VariantOption(BaseModel):
 class Variant(BaseModel):
     id: str
     name: str
-    options: List[VariantOption]
+    options: list[VariantOption]
 
 class Product(BaseModel):
     _id: str
     name: str
     availableInStore: bool
-    taxes: List[dict] = []
-    variants: List[Variant]
-    description: Optional[str] = None
+    taxes: list[dict] = []
+    variants: list[Variant]
+    description: str | None
 
 class Price(BaseModel):
     _id: str
@@ -68,7 +68,7 @@ class Price(BaseModel):
     type: str
     currency: str
     amount: float
-    variantOptionIds: List[str]
+    variantOptionIds: list[str]
 
 class OrderItem(BaseModel):
     name: str
@@ -83,7 +83,7 @@ class OrderStatusUpdate(BaseModel):
     altId: str
     altType: str
     status: str
-    taxSummary: List[TaxSummary]
+    taxSummary: list[TaxSummary]
     fulfillmentStatus: str
     contactId: str
     currency: str
@@ -94,7 +94,7 @@ class OrderStatusUpdate(BaseModel):
     createdAt: datetime
     updatedAt: datetime
     contactSnapshot: ContactSnapshot
-    items: List[OrderItem]
+    items: list[OrderItem]
 
     class Config:
         allow_population_by_field_name = True

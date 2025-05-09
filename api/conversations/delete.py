@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,8 +7,8 @@ API_VERSION = "2021-04-15"
 
 async def delete_conversation(
     conversation_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, bool]:
+    headers: dict[str, str]
+) -> dict[str, bool]:
     """
     Delete a conversation by ID from the Go High Level API.
     

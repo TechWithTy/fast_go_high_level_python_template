@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+
 from datetime import datetime
 
 class Property(BaseModel):
@@ -9,9 +9,9 @@ class Property(BaseModel):
 class RecordUpdate(BaseModel):
     type: str = Field(..., description="Indicates the type of record updated")
     locationId: str = Field(..., description="Identifies the location associated with the updated record")
-    owners: List[str] = Field(..., description="Unique identifiers of users who own the record")
-    followers: List[str] = Field(..., description="List of users following the record for updates")
-    properties: List[Property] = Field(..., description="Key-value pairs representing additional record details")
+    owners: list[str] = Field(..., description="Unique identifiers of users who own the record")
+    followers: list[str] = Field(..., description="list of users following the record for updates")
+    properties: list[Property] = Field(..., description="Key-value pairs representing additional record details")
     id: str = Field(..., description="Unique identifier for the updated record")
     timestamp: datetime = Field(..., description="Date and time when the record was updated")
 

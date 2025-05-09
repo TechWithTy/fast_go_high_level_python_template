@@ -1,10 +1,10 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_category(headers: Dict[str, str], location_id: str, category_id: str) -> Dict[str, Any]:
+async def get_category(headers: dict[str, str], location_id: str, category_id: str) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/categories/{category_id}"
 
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

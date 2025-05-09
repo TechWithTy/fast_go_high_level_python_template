@@ -1,23 +1,23 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_custom_provider(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     name: str,
     description: str,
     payments_url: str,
     query_url: str,
     image_url: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a new custom payment provider integration.
 
     Args:
-        headers (Dict[str, str]): Headers containing the authorization token.
+        headers (dict[str, str]): Headers containing the authorization token.
         location_id (str): The location ID.
         name (str): The name of the custom provider.
         description (str): Description of the payment gateway.
@@ -26,7 +26,7 @@ async def create_custom_provider(
         image_url (str): Public image URL for the payment gateway logo.
 
     Returns:
-        Dict[str, Any]: The response data from the API.
+        dict[str, Any]: The response data from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

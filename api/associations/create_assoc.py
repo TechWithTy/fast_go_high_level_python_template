@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -13,7 +13,7 @@ async def create_association(
     first_object_key: str,
     second_object_label: str,
     second_object_key: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create an association between objects in Go High Level.
     

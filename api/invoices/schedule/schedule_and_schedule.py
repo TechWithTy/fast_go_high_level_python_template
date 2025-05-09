@@ -1,17 +1,17 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def schedule_invoice(
     schedule_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location",
     live_mode: bool = True,
-    auto_payment: Dict[str, Any] = None
-) -> Dict[str, Any]:
+    auto_payment: dict[str, Any] = None
+) -> dict[str, Any]:
     """
     Schedule an invoice to start sending to the customer.
 

@@ -1,16 +1,16 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def delete_social_media_account(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     account_id: str,
-    company_id: Optional[str] = None,
-    user_id: Optional[str] = None
-) -> Dict[str, Any]:
+    company_id: str | None,
+    user_id: str | None
+) -> dict[str, Any]:
     """
     Delete a social media account and remove it from the group.
 

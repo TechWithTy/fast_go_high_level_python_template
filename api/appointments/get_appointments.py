@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 async def get_appointments(
     contact_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get appointments for a specific contact from the Go High Level API.
     

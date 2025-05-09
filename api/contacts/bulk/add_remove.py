@@ -15,7 +15,7 @@ async def bulk_update_contacts_business(
 
     Args:
         location_id: The ID of the location
-        contact_ids: List of contact IDs to add/remove
+        contact_ids: list of contact IDs to add/remove
         business_id: The ID of the business to add contacts to (or None to remove)
         headers: Dictionary containing Authorization and Version headers
 

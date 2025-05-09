@@ -1,21 +1,21 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def list_estimates(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location",
     limit: int = 10,
     offset: int = 0,
-    contact_id: Optional[str] = None,
-    end_at: Optional[str] = None,
-    search: Optional[str] = None,
-    start_at: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    contact_id: str | None,
+    end_at: str | None,
+    search: str | None,
+    start_at: str | None,
+    status: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/list"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

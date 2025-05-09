@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 from app.caching.utils.redis_cache import invalidate_cache
@@ -8,10 +8,10 @@ API_VERSION = "2021-07-28"
 
 async def delete_sub_account(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     delete_twilio_account: bool = False,
     cache_key_prefix: str = "ghl:subaccounts"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Delete a Sub-Account (Formerly Location) from the Agency.
 
@@ -22,7 +22,7 @@ async def delete_sub_account(
         cache_key_prefix: Prefix for cache keys
 
     Returns:
-        Dict containing the API response
+        dict containing the API response
 
     Raises:
         Exception: If the API request fails or if required headers are missing

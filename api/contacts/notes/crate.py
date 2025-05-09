@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def create_note(
     contact_id: str,
     body: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     user_id: str = None
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a note for a contact in Go High Level.
     

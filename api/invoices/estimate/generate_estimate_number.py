@@ -1,14 +1,14 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def generate_estimate_number(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Generate the next estimate number for a given location.
     

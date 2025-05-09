@@ -1,20 +1,20 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def create_contact(headers: Dict[str, str], **contact_data: Any) -> Dict[str, Any]:
+async def create_contact(headers: dict[str, str], **contact_data: Any) -> dict[str, Any]:
     """
     Create a contact in Go High Level
 
     Args:
-        headers (Dict[str, str]): Request headers including Authorization
+        headers (dict[str, str]): Request headers including Authorization
         **contact_data: Contact data fields (firstName, lastName, etc.)
 
     Returns:
-        Dict[str, Any]: API response
+        dict[str, Any]: API response
 
     Raises:
         ValueError: If Authorization header is missing or invalid

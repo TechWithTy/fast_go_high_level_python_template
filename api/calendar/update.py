@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-04-15"
 
 async def update_calendar(
     calendar_id: str,
-    calendar_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    calendar_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a calendar by ID in Go High Level.
     

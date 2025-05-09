@@ -16,7 +16,7 @@ class OpportunityDelete(BaseModel):
     name: str = Field(..., description="Name of the opportunity")
     pipelineId: str = Field(..., description="Pipeline ID")
     pipelineStageId: str = Field(..., description="Pipeline stage ID")
-    source: Optional[str] = Field(None, description="Source of the opportunity")
+    source: str | None = Field(None, description="Source of the opportunity")
     status: str = Field(..., description="Status of the opportunity")
     dateAdded: datetime = Field(..., description="Date the opportunity was added")
 

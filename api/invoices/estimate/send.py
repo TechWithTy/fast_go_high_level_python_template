@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def send_estimate(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     estimate_id: str,
     alt_id: str,
     alt_type: str = "location",
@@ -15,7 +15,7 @@ async def send_estimate(
     from_name: str = None,
     from_email: str = None,
     estimate_name: str = "Estimate"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/{estimate_id}/send"
 
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

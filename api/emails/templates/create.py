@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -9,17 +9,17 @@ async def create_email_template(
     location_id: str,
     template_type: str,
     import_provider: str,
-    headers: Dict[str, str],
-    title: Optional[str] = None,
-    updated_by: Optional[str] = None,
+    headers: dict[str, str],
+    title: str | None,
+    updated_by: str | None,
     builder_version: str = "2",
-    name: Optional[str] = None,
-    parent_id: Optional[str] = None,
+    name: str | None,
+    parent_id: str | None,
     template_data_url: str = "",
-    import_url: Optional[str] = None,
-    template_source: Optional[str] = None,
+    import_url: str | None,
+    template_source: str | None,
     is_plain_text: bool = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a new email template in Go High Level.
     

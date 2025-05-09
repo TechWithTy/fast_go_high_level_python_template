@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+
 from datetime import datetime
 
 class Property(BaseModel):
@@ -10,9 +10,9 @@ class DeleteRecord(BaseModel):
     id: str
     locationId: str
     timestamp: datetime
-    owners: List[str]
-    followers: List[str]
-    properties: List[Property]
+    owners: list[str]
+    followers: list[str]
+    properties: list[Property]
 
 # Example usage
 example_payload = {

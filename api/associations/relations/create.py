@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,12 +6,12 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_relation(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     association_id: str,
     first_record_id: str,
     second_record_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a relation between associated entities in Go High Level.
     

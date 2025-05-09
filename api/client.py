@@ -10,7 +10,7 @@ class GoHighLevelClient:
     Client for interacting with the Go High Level API.
     """
 
-    def __init__(self, api_key: str | None = None, api_base_url: str | None = None):
+    def __init__(self, api_key: str | None, api_base_url: str | None):
         self.api_key = api_key or settings.GHL_API_KEY
         self.api_base_url = api_base_url or settings.GHL_API_BASE_URL
         self.api_version = "2021-07-28"
@@ -40,7 +40,7 @@ class GoHighLevelClient:
             **kwargs: Additional arguments to pass to httpx.request
 
         Returns:
-            Dict[str, Any]: JSON response from the API
+            dict[str, Any]: JSON response from the API
         """
         url = f"{self.api_base_url}/{endpoint}"
         headers = self.get_headers()

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,8 +7,8 @@ API_VERSION = "2021-04-15"
 
 async def get_calendar_groups(
     location_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get all calendar groups in a location from the Go High Level API.
     

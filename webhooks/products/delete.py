@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -9,7 +9,7 @@ class Option(BaseModel):
 class Variant(BaseModel):
     id: str
     name: str
-    options: List[Option]
+    options: list[Option]
 
 class Media(BaseModel):
     id: str
@@ -20,9 +20,9 @@ class Media(BaseModel):
 
 class Product(BaseModel):
     _id: str
-    description: Optional[str]
-    variants: List[Variant]
-    medias: List[Media]
+    description: str | None
+    variants: list[Variant]
+    medias: list[Media]
     locationId: str
     name: str
     productType: str
@@ -30,8 +30,8 @@ class Product(BaseModel):
     userId: str
     createdAt: datetime
     updatedAt: datetime
-    statementDescriptor: Optional[str]
-    image: Optional[str]
+    statementDescriptor: str | None
+    image: str | None
 
 # Example usage
 example_data = {

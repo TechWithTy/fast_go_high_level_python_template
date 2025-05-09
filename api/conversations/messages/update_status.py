@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,11 +8,11 @@ API_VERSION = "2021-04-15"
 async def update_message_status(
     message_id: str,
     status: str,
-    headers: Dict[str, str],
-    error: Optional[Dict[str, str]] = None,
-    email_message_id: Optional[str] = None,
-    recipients: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    error:dict[str, str] | None,
+    email_message_id: str | None,
+    recipients: list[str] | None = None
+) -> dict[str, Any]:
     """
     Update the status of a message in Go High Level.
     

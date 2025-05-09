@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,10 +7,10 @@ API_VERSION = "2021-04-15"
 
 async def get_notes(
     appointment_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 10,
     offset: int = 0,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get notes for an appointment in Go High Level.
     

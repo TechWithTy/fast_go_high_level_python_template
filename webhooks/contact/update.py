@@ -1,9 +1,9 @@
-from typing import Dict, Union, List
+from typing ,Union
 
 class ContactUpdate:
     """Called whenever specific fields in a contact are updated"""
 
-    def __init__(self, data: Dict[str, Union[str, bool, List, Dict]]):
+    def __init__(self, data: dict[str, Union[str, bool, list, dict]]):
         self.type: str = data["type"]
         self.location_id: str = data["locationId"]
         self.id: str = data["id"]
@@ -22,14 +22,14 @@ class ContactUpdate:
         self.phone: str = data.get("phone", "")
         self.postal_code: str = data.get("postalCode", "")
         self.state: str = data.get("state", "")
-        self.tags: List[str] = data.get("tags", [])
+        self.tags: list[str] = data.get("tags", [])
         self.website: str = data.get("website", "")
-        self.attachments: List = data.get("attachments", [])
+        self.attachments: list = data.get("attachments", [])
         self.assigned_to: str = data.get("assignedTo", "")
-        self.custom_fields: List[Dict[str, Union[str, int, List, Dict]]] = data.get("customFields", [])
+        self.custom_fields: list[dict[str, Union[str, int, list, dict]]] = data.get("customFields", [])
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Union[str, bool, List, Dict]]) -> 'ContactUpdate':
+    def from_dict(cls, data: dict[str, Union[str, bool, list, dict]]) -> 'ContactUpdate':
         return cls(data)
 
 # Example usage

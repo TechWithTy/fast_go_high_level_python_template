@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -7,13 +7,13 @@ API_VERSION = "2021-07-28"
 async def list_product_prices(
     product_id: str,
     location_id: str,
-    headers: Dict[str, str],
-    ids: Optional[str] = None,
-    limit: Optional[int] = 0,
-    offset: Optional[int] = 0
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    ids: str | None,
+    limit: int | None 0,
+    offset: int | None 0
+) -> dict[str, Any]:
     """
-    List Prices for a Product
+    list Prices for a Product
 
     Args:
         product_id: ID of the product

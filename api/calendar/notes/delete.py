@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-04-15"
 async def delete_note(
     appointment_id: str,
     note_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, bool]:
+    headers: dict[str, str]
+) -> dict[str, bool]:
     """
     Delete a note from an appointment in the Go High Level API.
     

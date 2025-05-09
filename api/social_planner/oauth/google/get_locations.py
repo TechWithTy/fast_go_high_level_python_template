@@ -1,14 +1,14 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_google_business_locations(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     account_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header")
 

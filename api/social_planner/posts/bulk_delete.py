@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing  dict, Any
 import httpx
 import logging
 
@@ -6,17 +6,17 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def bulk_delete_social_planner_posts(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    post_ids: List[str]
-) -> Dict[str, Any]:
+    post_ids: list[str]
+) -> dict[str, Any]:
     """
     Bulk delete social planner posts.
 
     Args:
         headers: Dictionary containing Authorization and Version headers
         location_id: The ID of the location
-        post_ids: List of post IDs to delete (max 50)
+        post_ids: list of post IDs to delete (max 50)
 
     Returns:
         Dictionary containing the API response

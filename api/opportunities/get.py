@@ -1,19 +1,19 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_opportunity(opportunity_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_opportunity(opportunity_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get an opportunity by its ID.
 
     Args:
         opportunity_id (str): The ID of the opportunity to retrieve.
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
 
     Returns:
-        Dict[str, Any]: The opportunity data.
+        dict[str, Any]: The opportunity data.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

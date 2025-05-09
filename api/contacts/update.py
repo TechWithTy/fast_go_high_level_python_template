@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -11,15 +11,15 @@ class DndSetting:
     code: str
 
 class UpdateCustomField:
-    id: Optional[str]
-    key: Optional[str]
+    id: str | None
+    key: str | None
     field_value: str
 
 async def update_contact(
     contact_id: str,
-    update_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    update_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a contact in the Go High Level API.
     

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,12 +6,12 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def search_contacts(
-    headers: Dict[str, str],
-    filters: Optional[Dict[str, Any]] = None,
-    location_id: Optional[str] = None,
+    headers: dict[str, str],
+    filters: dict[str, Any] = None,
+    location_id: str | None,
     limit: int = 20,
     offset: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Search contacts based on combinations of advanced filters.
     

@@ -1,17 +1,17 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def search_sub_accounts(
-    headers: Dict[str, str],
-    company_id: Optional[str] = None,
-    email: Optional[str] = None,
+    headers: dict[str, str],
+    company_id: str | None,
+    email: str | None,
     limit: int = 10,
     order: str = "asc",
     skip: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Search Sub-Accounts (Formerly Locations)
 
@@ -24,7 +24,7 @@ async def search_sub_accounts(
         skip: The value by which the results should be skipped (default: 0)
 
     Returns:
-        Dict containing the search results
+        dict containing the search results
     """
     url = f"{API_BASE_URL}/locations/search"
 

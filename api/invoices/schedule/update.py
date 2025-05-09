@@ -1,12 +1,12 @@
 import httpx
-from typing import List, Dict, Optional
+from typing  dict, Optional
 from datetime import datetime
 
-async def update_schedule(schedule_id: str, headers: Dict[str, str], alt_id: str, alt_type: str, name: str,
-                          contact_details: Dict, schedule: Dict, live_mode: bool, business_details: Dict,
-                          currency: str, items: List[Dict], discount: Optional[Dict] = None,
-                          terms_notes: Optional[str] = None, title: Optional[str] = None,
-                          attachments: Optional[List[Dict]] = None) -> Dict:
+async def update_schedule(schedule_id: str, headers: dict[str, str], alt_id: str, alt_type: str, name: str,
+                          contact_details: dict, schedule: dict, live_mode: bool, business_details: dict,
+                          currency: str, items: list[dict], discount: dict | None = None,
+                          terms_notes: str | None, title: str | None,
+                          attachments: list[dict] | None = None) -> dict:
     url = f"https://services.leadconnectorhq.com/invoices/schedule/{schedule_id}"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

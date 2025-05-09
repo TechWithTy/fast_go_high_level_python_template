@@ -1,5 +1,5 @@
 # backend/apps/go_high_level/api/custom_fieldsv2/delete.py
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-07-28"
 
 async def delete_custom_field(
     field_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete a custom field by ID from the Go High Level API.
     

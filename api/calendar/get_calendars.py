@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,10 +7,10 @@ API_VERSION = "2021-04-15"
 
 async def get_calendars(
     location_id: str,
-    headers: Dict[str, str],
-    group_id: Optional[str] = None,
+    headers: dict[str, str],
+    group_id: str | None,
     show_drafted: Optional[bool] = True
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get all calendars in a location from the Go High Level API.
     

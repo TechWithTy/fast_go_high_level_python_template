@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def update_task_to_complete(
     contact_id: str,
     task_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     completed: bool = True
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update a task's completed status for a contact in Go High Level.
     
@@ -21,7 +21,7 @@ async def update_task_to_complete(
         completed: Whether the task is completed (defaults to True)
         
     Returns:
-        Dict containing the updated task data
+        dict containing the updated task data
     """
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")

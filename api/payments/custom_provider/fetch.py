@@ -1,19 +1,19 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def fetch_custom_provider(headers: Dict[str, str], location_id: str) -> Dict[str, Any]:
+async def fetch_custom_provider(headers: dict[str, str], location_id: str) -> dict[str, Any]:
     """
     Fetch an existing payment config for a given location.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         location_id (str): The ID of the location.
 
     Returns:
-        Dict[str, Any]: The custom provider configuration.
+        dict[str, Any]: The custom provider configuration.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

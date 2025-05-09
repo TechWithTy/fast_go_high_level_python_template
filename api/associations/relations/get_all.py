@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,12 +7,12 @@ API_VERSION = "2021-07-28"
 
 async def get_all_relations(
     record_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     limit: int = 100,
     skip: int = 0,
-    association_ids: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    association_ids: list[str] | None = None
+) -> dict[str, Any]:
     """
     Get all relations by record ID from Go High Level API.
     

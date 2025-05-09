@@ -1,10 +1,10 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def edit_post(headers: Dict[str, str], location_id: str, post_id: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+async def edit_post(headers: dict[str, str], location_id: str, post_id: str, payload: dict[str, Any]) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/posts/{post_id}"
     
     request_headers = {

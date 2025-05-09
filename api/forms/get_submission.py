@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,14 +7,14 @@ API_VERSION = "2021-07-28"
 
 async def get_form_submissions(
     location_id: str,
-    headers: Dict[str, str],
-    form_id: Optional[str] = None,
-    start_at: Optional[str] = None,
-    end_at: Optional[str] = None,
-    q: Optional[str] = None,
-    limit: Optional[int] = 20,
-    page: Optional[int] = 1
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    form_id: str | None,
+    start_at: str | None,
+    end_at: str | None,
+    q: str | None,
+    limit: int | None 20,
+    page: int | None 1
+) -> dict[str, Any]:
     """
     Get form submissions from the Go High Level API.
     

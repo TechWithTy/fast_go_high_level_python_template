@@ -1,7 +1,7 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
-async def create_invoice_estimate(headers: Dict[str, str], payload: Dict[str, Any]) -> Dict[str, Any]:
+async def create_invoice_estimate(headers: dict[str, str], payload: dict[str, Any]) -> dict[str, Any]:
     url = "https://services.leadconnectorhq.com/invoices/estimate"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

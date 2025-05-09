@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def get_tag(location_id: str, tag_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def get_tag(location_id: str, tag_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Get tag by id from Go High Level API.
 

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,10 +7,10 @@ API_VERSION = "2021-07-28"
 
 async def get_all_associations_for_sub_account(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     limit: int = 100,
     skip: int = 0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get all associations for a sub-account/location from Go High Level API.
     

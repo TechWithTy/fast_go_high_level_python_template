@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing , Optional
 import httpx
 import logging
 
@@ -6,12 +6,12 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def upload_media_file(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     file: Optional[bytes] = None,
     hosted: Optional[bool] = None,
-    file_url: Optional[str] = None,
-    name: Optional[str] = None,
-    parent_id: Optional[str] = None
+    file_url: str | None,
+    name: str | None,
+    parent_id: str | None
 ) -> dict:
     """
     Upload a file to the Media Library.

@@ -1,17 +1,17 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_redirect(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     domain: str,
     path: str,
     target: str,
     action: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a new URL redirect in the system.
 
@@ -24,7 +24,7 @@ async def create_redirect(
         action: Action performed by the redirect (e.g., 'funnel', 'website', 'url', 'all')
 
     Returns:
-        Dict containing details of the created redirect
+        dict containing details of the created redirect
 
     Raises:
         httpx.HTTPStatusError: If the API request fails

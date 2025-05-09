@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,10 +6,10 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_fields_by_obj_key(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     object_key: str,
     location_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get Custom Fields By Object Key.
     

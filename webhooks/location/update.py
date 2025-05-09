@@ -7,7 +7,7 @@ class LocationUpdate(BaseModel):
     company_id: str = Field(..., alias="companyId", description="Unique identifier for the company")
     name: str = Field(..., description="Name of the location")
     email: str = Field(..., description="Email associated with the location")
-    stripe_product_id: Optional[str] = Field(None, alias="stripeProductId", description="Stripe product ID if applicable")
+    stripe_product_id: str | None = Field(None, alias="stripeProductId", description="Stripe product ID if applicable")
 
     class Config:
         allow_population_by_field_name = True

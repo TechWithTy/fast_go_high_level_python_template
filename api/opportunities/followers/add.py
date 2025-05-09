@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,15 +7,15 @@ API_VERSION = "2021-07-28"
 
 async def add_followers(
     opportunity_id: str,
-    followers: List[str],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    followers: list[str],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Add followers to an opportunity in Go High Level.
     
     Args:
         opportunity_id: The ID of the opportunity to add followers to
-        followers: List of follower IDs to add to the opportunity
+        followers: list of follower IDs to add to the opportunity
         headers: Dictionary containing Authorization and Version headers
         
     Returns:

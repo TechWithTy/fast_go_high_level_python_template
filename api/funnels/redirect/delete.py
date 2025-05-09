@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -7,8 +7,8 @@ API_VERSION = "2021-07-28"
 async def delete_redirect_by_id(
     redirect_id: str,
     location_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete a URL redirect by its ID.
 

@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,10 +9,10 @@ async def get_snapshot_push_between_dates(
     company_id: str,
     from_date: str,
     to_date: str,
-    headers: Dict[str, str],
-    last_doc: Optional[str] = None,
-    limit: Optional[int] = 10
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    last_doc: str | None,
+    limit: int | None 10
+) -> dict[str, Any]:
     """
     Get list of sub-accounts snapshot pushed in time period.
 
@@ -21,12 +21,12 @@ async def get_snapshot_push_between_dates(
         company_id (str): The ID of the company.
         from_date (str): Start date in format 'MM-DD-YYYY HH:MM AM/PM'.
         to_date (str): End date in format 'MM-DD-YYYY HH:MM AM/PM'.
-        headers (Dict[str, str]): Headers containing Authorization token.
+        headers (dict[str, str]): Headers containing Authorization token.
         last_doc (str, optional): ID for last document to skip.
         limit (int, optional): Number of results to return. Defaults to 10.
 
     Returns:
-        Dict[str, Any]: The response data containing snapshot push information.
+        dict[str, Any]: The response data containing snapshot push information.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

@@ -1,29 +1,29 @@
 import httpx
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_social_media_post(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    account_ids: List[str],
+    account_ids: list[str],
     summary: str,
-    media: List[Dict[str, Any]],
+    media: list[dict[str, Any]],
     status: str = "draft",
-    schedule_date: Optional[str] = None,
-    created_by: Optional[str] = None,
-    follow_up_comment: Optional[str] = None,
-    og_tags_details: Optional[Dict[str, str]] = None,
+    schedule_date: str | None,
+    created_by: str | None,
+    follow_up_comment: str | None,
+    og_tags_details:dict[str, str] | None,
     post_type: str = "post",
-    post_approval_details: Optional[Dict[str, Any]] = None,
+    post_approval_details: dict[str, Any] = None,
     schedule_time_updated: bool = False,
-    tags: Optional[List[str]] = None,
-    category_id: Optional[str] = None,
-    tiktok_post_details: Optional[Dict[str, Any]] = None,
-    gmb_post_details: Optional[Dict[str, Any]] = None,
-    user_id: Optional[str] = None
-) -> Dict[str, Any]:
+    tags: list[str] | None = None,
+    category_id: str | None,
+    tiktok_post_details: dict[str, Any] = None,
+    gmb_post_details: dict[str, Any] = None,
+    user_id: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/posts"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

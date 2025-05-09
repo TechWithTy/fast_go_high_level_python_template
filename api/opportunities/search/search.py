@@ -1,32 +1,32 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def search_opportunities(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    assigned_to: Optional[str] = None,
-    campaign_id: Optional[str] = None,
-    contact_id: Optional[str] = None,
-    country: Optional[str] = None,
-    date: Optional[str] = None,
-    end_date: Optional[str] = None,
+    assigned_to: str | None,
+    campaign_id: str | None,
+    contact_id: str | None,
+    country: str | None,
+    date: str | None,
+    end_date: str | None,
     get_calendar_events: Optional[bool] = None,
     get_notes: Optional[bool] = None,
     get_tasks: Optional[bool] = None,
-    opportunity_id: Optional[str] = None,
-    limit: Optional[int] = None,
-    order: Optional[str] = None,
-    page: Optional[int] = None,
-    pipeline_id: Optional[str] = None,
-    pipeline_stage_id: Optional[str] = None,
-    q: Optional[str] = None,
-    start_after: Optional[str] = None,
-    start_after_id: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    opportunity_id: str | None,
+    limit: int | None,
+    order: str | None,
+    page: int | None,
+    pipeline_id: str | None,
+    pipeline_stage_id: str | None,
+    q: str | None,
+    start_after: str | None,
+    start_after_id: str | None,
+    status: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/opportunities/search"
     
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

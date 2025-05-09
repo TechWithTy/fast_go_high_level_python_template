@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,15 +6,15 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def fetch_funnels(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    category: Optional[str] = None,
-    limit: Optional[int] = None,
-    name: Optional[str] = None,
-    offset: Optional[int] = None,
-    parent_id: Optional[str] = None,
-    funnel_type: Optional[str] = None
-) -> Dict[str, Any]:
+    category: str | None,
+    limit: int | None,
+    name: str | None,
+    offset: int | None,
+    parent_id: str | None,
+    funnel_type: str | None
+) -> dict[str, Any]:
     """
     Fetch a list of funnels based on the given query parameters.
 

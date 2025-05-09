@@ -1,6 +1,6 @@
 import os
 import requests
-from typing import Dict, Any
+from typing , Any
 
 BASE_URL = "https://api.gohighlevel.com/v1"
 
@@ -14,13 +14,13 @@ class InstalledLocationsParams:
         self.limit = limit
         self.skip = skip
 
-def get_headers(token: str) -> Dict[str, str]:
+def get_headers(token: str) -> dict[str, str]:
     return {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json"
     }
 
-def get_access_token(client_credentials: Dict[str, str]) -> Dict[str, Any]:
+def get_access_token(client_credentials: dict[str, str]) -> dict[str, Any]:
     """
     Get access token using client credentials.
     """
@@ -30,7 +30,7 @@ def get_access_token(client_credentials: Dict[str, str]) -> Dict[str, Any]:
         raise Exception(f"Error fetching access token: {response.text}")
     return response.json()
 
-def get_location_access_token(token: str, data: LocationTokenRequest) -> Dict[str, Any]:
+def get_location_access_token(token: str, data: LocationTokenRequest) -> dict[str, Any]:
     """
     Get location access token using an agency token.
     
@@ -51,7 +51,7 @@ def get_location_access_token(token: str, data: LocationTokenRequest) -> Dict[st
         raise Exception(f"Error fetching location access token: {response.text}")
     return response.json()
 
-def get_installed_locations(token: str, params: InstalledLocationsParams) -> Dict[str, Any]:
+def get_installed_locations(token: str, params: InstalledLocationsParams) -> dict[str, Any]:
     """
     Get locations where the app is installed.
     

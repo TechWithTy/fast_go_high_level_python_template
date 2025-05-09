@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def delete_opportunity(opportunity_id: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def delete_opportunity(opportunity_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Delete an opportunity.
 

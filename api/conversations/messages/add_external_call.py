@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,16 +6,16 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
 async def add_external_call(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     conversation_id: str,
     conversation_provider_id: str,
     to: str,
     from_: str,
     status: str = "completed",
-    attachments: Optional[List[str]] = None,
-    alt_id: Optional[str] = None,
-    date: Optional[str] = None
-) -> Dict[str, Any]:
+    attachments: list[str] | None = None,
+    alt_id: str | None,
+    date: str | None
+) -> dict[str, Any]:
     """
     Add an external outbound call to a conversation.
     

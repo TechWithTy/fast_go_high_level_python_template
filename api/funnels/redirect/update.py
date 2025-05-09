@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -10,8 +10,8 @@ async def update_redirect_by_id(
     target: str,
     action: str,
     location_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update an existing URL redirect in the system.
 

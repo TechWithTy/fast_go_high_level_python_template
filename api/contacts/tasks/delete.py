@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,8 +8,8 @@ API_VERSION = "2021-07-28"
 async def delete_task(
     contact_id: str,
     task_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, bool]:
+    headers: dict[str, str]
+) -> dict[str, bool]:
     """
     Delete a task for a contact from the Go High Level API.
     

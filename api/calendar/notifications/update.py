@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-04-15"
 async def update_calendar_notification(
     calendar_id: str,
     notification_id: str,
-    notification_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    notification_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a calendar notification in Go High Level.
     

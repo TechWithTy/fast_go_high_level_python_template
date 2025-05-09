@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,20 +7,20 @@ API_VERSION = "2021-04-15"
 
 async def create_calendar_notification(
     calendar_id: str,
-    notifications: List[Dict[str, Any]],
-    headers: Dict[str, str]
-) -> List[Dict[str, Any]]:
+    notifications: list[dict[str, Any]],
+    headers: dict[str, str]
+) -> list[dict[str, Any]]:
     """
     Create calendar notifications in Go High Level.
     
     Args:
         calendar_id: ID of the calendar
-        notifications: List of notification objects with properties like receiverType, 
+        notifications: list of notification objects with properties like receiverType, 
                       channel, notificationType, etc.
         headers: Dictionary containing Authorization and Version headers
         
     Returns:
-        List of created notification objects
+        list of created notification objects
         
     Raises:
         Exception: If the API request fails or if required headers are missing

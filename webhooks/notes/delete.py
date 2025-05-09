@@ -1,8 +1,8 @@
-from typing import Dict, Any
+from typing , Any
 from datetime import datetime
 
 class NoteDelete:
-    def __init__(self, data: Dict[str, Any]):
+    def __init__(self, data: dict[str, Any]):
         self.type: str = data['type']
         self.location_id: str = data['locationId']
         self.id: str = data['id']
@@ -11,7 +11,7 @@ class NoteDelete:
         self.date_added: datetime = datetime.fromisoformat(data['dateAdded'].replace('Z', '+00:00'))
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> 'NoteDelete':
+    def from_dict(cls, data: dict[str, Any]) -> 'NoteDelete':
         return cls(data)
 
     def __str__(self) -> str:

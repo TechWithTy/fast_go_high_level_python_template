@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -7,11 +7,11 @@ API_VERSION = "2021-04-15"
 
 async def update_rebilling(
     company_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     product: str,
-    location_ids: List[str],
-    config: Dict[str, Any]
-) -> Dict[str, Any]:
+    location_ids: list[str],
+    config: dict[str, Any]
+) -> dict[str, Any]:
     """
     Update rebilling for given locationIds.
 
@@ -19,7 +19,7 @@ async def update_rebilling(
         company_id: The ID of the company
         headers: Dictionary containing Authorization and Version headers
         product: The product string
-        location_ids: List of location IDs
+        location_ids: list of location IDs
         config: Configuration object
 
     Returns:

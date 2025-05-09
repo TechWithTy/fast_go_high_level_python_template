@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -11,11 +11,11 @@ async def send_invoice(
     alt_type: str,
     user_id: str,
     action: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     live_mode: bool = True,
-    sent_from: Optional[Dict[str, str]] = None,
-    auto_payment: Optional[Dict[str, Any]] = None
-) -> Dict[str, Any]:
+    sent_from:dict[str, str] | None,
+    auto_payment: dict[str, Any] = None
+) -> dict[str, Any]:
     """
     Send an invoice using GoHighLevel API
     

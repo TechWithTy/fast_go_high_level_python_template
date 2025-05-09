@@ -1,7 +1,7 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
-async def manage_auto_payment(schedule_id: str, alt_id: str, alt_type: str, auto_payment: Dict[str, Any], headers: Dict[str, str]) -> Dict[str, Any]:
+async def manage_auto_payment(schedule_id: str, alt_id: str, alt_type: str, auto_payment: dict[str, Any], headers: dict[str, str]) -> dict[str, Any]:
     url = f"https://services.leadconnectorhq.com/invoices/schedule/{schedule_id}/auto-payment"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

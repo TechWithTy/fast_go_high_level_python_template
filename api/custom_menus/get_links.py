@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,18 +6,18 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_custom_menu_links(
-    headers: Dict[str, str],
-    limit: Optional[int] = 20,
-    location_id: Optional[str] = None,
-    query: Optional[str] = None,
+    headers: dict[str, str],
+    limit: int | None 20,
+    location_id: str | None,
+    query: str | None,
     show_on_company: Optional[bool] = None,
-    skip: Optional[int] = 0
-) -> Dict[str, Any]:
+    skip: int | None 0
+) -> dict[str, Any]:
     """
     Fetches a collection of custom menus based on specified criteria.
 
     Args:
-        headers (Dict[str, str]): Headers containing Authorization and Version.
+        headers (dict[str, str]): Headers containing Authorization and Version.
         limit (int, optional): Maximum number of items to return. Defaults to 20.
         location_id (str, optional): Unique identifier of the location.
         query (str, optional): Search query to filter custom menus by name.
@@ -25,7 +25,7 @@ async def get_custom_menu_links(
         skip (int, optional): Number of items to skip for pagination. Defaults to 0.
 
     Returns:
-        Dict[str, Any]: A dictionary containing the custom menu links data.
+        dict[str, Any]: A dictionary containing the custom menu links data.
 
     Raises:
         Exception: If the API request fails or if required headers are missing.

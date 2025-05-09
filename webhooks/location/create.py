@@ -13,7 +13,7 @@ class LocationCreate(BaseModel):
     companyId: str = Field(..., description="Company ID")
     name: str = Field(..., description="Location name")
     email: str = Field(..., description="Location email")
-    stripeProductId: Optional[str] = Field(None, description="Stripe Product ID")
+    stripeProductId: str | None = Field(None, description="Stripe Product ID")
 
 # Example usage
 example_data = {

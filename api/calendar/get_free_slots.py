@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,12 +6,12 @@ async def get_free_slots(
     calendar_id: str,
     start_date: int,
     end_date: int,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     enable_look_busy: Optional[bool] = False,
-    timezone: Optional[str] = None,
-    user_id: Optional[str] = None,
-    user_ids: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    timezone: str | None,
+    user_id: str | None,
+    user_ids: list[str] | None = None
+) -> dict[str, Any]:
     """
     Get free slots for a calendar between a date range.
     

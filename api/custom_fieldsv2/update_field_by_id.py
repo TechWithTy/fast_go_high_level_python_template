@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-07-28"
 
 async def update_custom_field_by_id(
     field_id: str,
-    field_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    field_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a custom field by ID in Go High Level API.
     

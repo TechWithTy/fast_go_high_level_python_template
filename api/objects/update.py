@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-07-28"
 
 async def update_object_schema(
     key: str,
-    object_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    object_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a custom or standard object schema in Go High Level.
     

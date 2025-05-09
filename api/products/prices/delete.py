@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -9,8 +9,8 @@ async def delete_product_price(
     product_id: str,
     price_id: str,
     location_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, bool]:
+    headers: dict[str, str]
+) -> dict[str, bool]:
     """
     Delete a specific price associated with a particular product.
 

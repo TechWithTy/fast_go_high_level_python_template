@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,27 +6,27 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
 async def add_inbound_message(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     type: str,
     conversation_id: str,
     conversation_provider_id: str,
-    message: Optional[str] = None,
-    attachments: Optional[List[str]] = None,
-    html: Optional[str] = None,
-    subject: Optional[str] = None,
-    email_from: Optional[str] = None,
-    email_to: Optional[str] = None,
-    email_cc: Optional[List[str]] = None,
-    email_bcc: Optional[List[str]] = None,
-    email_message_id: Optional[str] = None,
-    alt_id: Optional[str] = None,
-    direction: Optional[str] = "inbound",
-    date: Optional[str] = None,
-    call: Optional[Dict[str, Any]] = None,
-    to: Optional[str] = None,
-    from_: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    message: str | None,
+    attachments: list[str] | None = None,
+    html: str | None,
+    subject: str | None,
+    email_from: str | None,
+    email_to: str | None,
+    email_cc: list[str] | None = None,
+    email_bcc: list[str] | None = None,
+    email_message_id: str | None,
+    alt_id: str | None,
+    direction: str | None = "inbound",
+    date: str | None,
+    call: dict[str, Any] = None,
+    to: str | None,
+    from_: str | None,
+    status: str | None
+) -> dict[str, Any]:
     """
     Add an inbound message to a conversation.
     
@@ -41,8 +41,8 @@ async def add_inbound_message(
         subject: Subject of the email
         email_from: Sender email address
         email_to: Recipient email address
-        email_cc: List of CC email addresses
-        email_bcc: List of BCC email addresses
+        email_cc: list of CC email addresses
+        email_bcc: list of BCC email addresses
         email_message_id: Email message ID for threading
         alt_id: External mail provider's message ID
         direction: Message direction (inbound or outbound)

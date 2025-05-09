@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,7 +8,7 @@ API_VERSION = "2021-04-15"
 async def get_recording(
     message_id: str,
     location_id: str,
-    headers: Dict[str, str]
+    headers: dict[str, str]
 ) -> bytes:
     """
     Get the recording for a message by message ID.

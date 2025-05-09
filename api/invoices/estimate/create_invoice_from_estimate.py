@@ -1,17 +1,17 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_invoice_from_estimate(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     estimate_id: str,
     alt_id: str,
     alt_type: str = "location",
     mark_as_invoiced: bool = True,
     version: str = "v1"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/invoices/estimate/{estimate_id}/invoice"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

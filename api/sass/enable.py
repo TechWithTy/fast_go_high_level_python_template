@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,19 +7,19 @@ API_VERSION = "2021-04-15"
 
 async def enable_saas_for_sub_account(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     company_id: str,
     is_saas_v2: bool,
-    stripe_account_id: Optional[str] = None,
-    name: Optional[str] = None,
-    email: Optional[str] = None,
-    stripe_customer_id: Optional[str] = None,
-    contact_id: Optional[str] = None,
-    provider_location_id: Optional[str] = None,
-    description: Optional[str] = None,
-    saas_plan_id: Optional[str] = None,
-    price_id: Optional[str] = None
-) -> Dict[str, Any]:
+    stripe_account_id: str | None,
+    name: str | None,
+    email: str | None,
+    stripe_customer_id: str | None,
+    contact_id: str | None,
+    provider_location_id: str | None,
+    description: str | None,
+    saas_plan_id: str | None,
+    price_id: str | None
+) -> dict[str, Any]:
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Invalid or missing Authorization header")
 

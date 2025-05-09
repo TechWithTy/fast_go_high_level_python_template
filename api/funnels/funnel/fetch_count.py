@@ -1,15 +1,15 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def fetch_funnel_page_count(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     funnel_id: str,
     location_id: str,
-    name: Optional[str] = None
-) -> Dict[str, Any]:
+    name: str | None
+) -> dict[str, Any]:
     """
     Fetch count of funnel pages.
 

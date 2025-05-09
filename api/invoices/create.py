@@ -1,33 +1,33 @@
 import httpx
-from typing import Dict, List, Any, Optional
+from typing , list, Any, Optional
 
 async def create_invoice(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     name: str,
     contact_id: str,
     contact_name: str,
     issue_date: str,
-    items: List[Dict[str, Any]],
+    items: list[dict[str, Any]],
     currency: str = "USD",
     alt_type: str = "location",
-    business_details: Optional[Dict[str, Any]] = None,
-    discount: Optional[Dict[str, Any]] = None,
-    terms_notes: Optional[str] = None,
+    business_details: dict[str, Any] = None,
+    discount: dict[str, Any] = None,
+    terms_notes: str | None,
     title: str = "INVOICE",
-    contact_details: Optional[Dict[str, Any]] = None,
-    invoice_number: Optional[str] = None,
-    due_date: Optional[str] = None,
-    sent_to: Optional[Dict[str, List[str]]] = None,
+    contact_details: dict[str, Any] = None,
+    invoice_number: str | None,
+    due_date: str | None,
+    sent_to: Optional[dict[str, list[str]]] = None,
     live_mode: bool = True,
     automatic_taxes_enabled: bool = False,
-    payment_schedule: Optional[Dict[str, Any]] = None,
-    late_fees_config: Optional[Dict[str, Any]] = None,
-    tips_config: Optional[Dict[str, Any]] = None,
-    invoice_number_prefix: Optional[str] = None,
-    payment_methods: Optional[Dict[str, Any]] = None,
-    attachments: Optional[List[Dict[str, Any]]] = None
-) -> Dict[str, Any]:
+    payment_schedule: dict[str, Any] = None,
+    late_fees_config: dict[str, Any] = None,
+    tips_config: dict[str, Any] = None,
+    invoice_number_prefix: str | None,
+    payment_methods: dict[str, Any] = None,
+    attachments: Optional[list[dict[str, Any]]] = None
+) -> dict[str, Any]:
     """
     Create an invoice using GoHighLevel API
     
@@ -38,7 +38,7 @@ async def create_invoice(
         contact_id: Contact ID
         contact_name: Contact name
         issue_date: Issue date in YYYY-MM-DD format
-        items: List of invoice items
+        items: list of invoice items
         currency: Currency code (default: USD)
         alt_type: Alt type (default: location)
         business_details: Business details
@@ -56,7 +56,7 @@ async def create_invoice(
         tips_config: Tips configuration
         invoice_number_prefix: Prefix for invoice number
         payment_methods: Payment methods configuration
-        attachments: List of attachments
+        attachments: list of attachments
     
     Returns:
         API response as dictionary

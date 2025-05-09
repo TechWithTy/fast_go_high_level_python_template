@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,21 +8,21 @@ async def list_transactions(
     access_token: str,
     alt_id: str,
     alt_type: str,
-    contact_id: Optional[str] = None,
-    end_at: Optional[str] = None,
-    entity_id: Optional[str] = None,
-    entity_source_sub_type: Optional[str] = None,
-    entity_source_type: Optional[str] = None,
+    contact_id: str | None,
+    end_at: str | None,
+    entity_id: str | None,
+    entity_source_sub_type: str | None,
+    entity_source_type: str | None,
     limit: int = 10,
-    location_id: Optional[str] = None,
+    location_id: str | None,
     offset: int = 0,
-    payment_mode: Optional[str] = None,
-    search: Optional[str] = None,
-    start_at: Optional[str] = None,
-    subscription_id: Optional[str] = None
-) -> Dict[str, Any]:
+    payment_mode: str | None,
+    search: str | None,
+    start_at: str | None,
+    subscription_id: str | None
+) -> dict[str, Any]:
     """
-    List Transactions API
+    list Transactions API
 
     Retrieves a paginated list of transactions with optional filtering.
 
@@ -44,7 +44,7 @@ async def list_transactions(
         subscription_id (str, optional): Subscription id for filtering transactions.
 
     Returns:
-        Dict[str, Any]: A dictionary containing the list of transactions and total count.
+        dict[str, Any]: A dictionary containing the list of transactions and total count.
     """
     url = f"{API_BASE_URL}/payments/transactions"
 

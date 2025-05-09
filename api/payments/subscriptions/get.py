@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,7 +9,7 @@ async def get_subscription(
     alt_id: str,
     alt_type: str,
     access_token: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Get Subscription by ID.
 
@@ -22,7 +22,7 @@ async def get_subscription(
         access_token (str): Access Token for authentication.
 
     Returns:
-        Dict[str, Any]: A dictionary containing the subscription details.
+        dict[str, Any]: A dictionary containing the subscription details.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

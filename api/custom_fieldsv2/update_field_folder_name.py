@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-07-28"
 
 async def update_field_folder_name(
     folder_id: str,
-    folder_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    folder_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a custom field folder name in Go High Level.
     

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-07-28"
 
 async def get_campaigns(
     location_id: str,
-    headers: Dict[str, str],
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    status: str | None
+) -> dict[str, Any]:
     """
     Get campaigns from the Go High Level API.
     

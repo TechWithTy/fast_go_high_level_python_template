@@ -1,20 +1,20 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def delete_custom_menu(headers: Dict[str, str], custom_menu_id: str) -> Dict[str, Any]:
+async def delete_custom_menu(headers: dict[str, str], custom_menu_id: str) -> dict[str, Any]:
     """
     Delete a custom menu.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         custom_menu_id (str): The ID of the custom menu to delete.
 
     Returns:
-        Dict[str, Any]: A dictionary containing the API response.
+        dict[str, Any]: A dictionary containing the API response.
 
     Raises:
         ValueError: If the Authorization header is missing or invalid.

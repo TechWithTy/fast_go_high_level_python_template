@@ -1,10 +1,10 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def update_invoice(headers: Dict[str, str], invoice_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+async def update_invoice(headers: dict[str, str], invoice_id: str, data: dict[str, Any]) -> dict[str, Any]:
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")
 

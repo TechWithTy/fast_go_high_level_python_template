@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -7,8 +7,8 @@ API_VERSION = "2021-04-15"
 
 async def get_message_by_id(
     message_id: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Get message details by message ID from the Go High Level API.
     

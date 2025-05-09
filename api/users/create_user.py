@@ -1,10 +1,10 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def create_user(headers: Dict[str, str]) -> Dict[str, Any]:
+async def create_user(headers: dict[str, str]) -> dict[str, Any]:
     url = f"{API_BASE_URL}/users/"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

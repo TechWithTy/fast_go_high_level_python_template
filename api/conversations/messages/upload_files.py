@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -8,16 +8,16 @@ API_VERSION = "2021-04-15"
 async def upload_files(
     conversation_id: str,
     location_id: str,
-    file_attachments: List[bytes],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    file_attachments: list[bytes],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Upload file attachments to a conversation.
     
     Args:
         conversation_id: The ID of the conversation
         location_id: The ID of the location
-        file_attachments: List of file attachments as bytes
+        file_attachments: list of file attachments as bytes
         headers: Dictionary containing Authorization and Version headers
         
     Returns:

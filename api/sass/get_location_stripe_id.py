@@ -1,26 +1,26 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
 async def get_location_stripe_id(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     company_id: str,
-    customer_id: Optional[str] = None,
-    subscription_id: Optional[str] = None
-) -> Dict[str, Any]:
+    customer_id: str | None,
+    subscription_id: str | None
+) -> dict[str, Any]:
     """
     Get locations by stripeId with companyId.
 
     Args:
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         company_id (str): The ID of the company.
         customer_id (str, optional): The Stripe customer ID.
         subscription_id (str, optional): The Stripe subscription ID.
 
     Returns:
-        Dict[str, Any]: The API response containing location information.
+        dict[str, Any]: The API response containing location information.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

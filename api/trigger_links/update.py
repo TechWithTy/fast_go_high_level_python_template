@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -9,8 +9,8 @@ async def update_link(
     link_id: str,
     name: str,
     redirect_to: str,
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a link in Go High Level.
 

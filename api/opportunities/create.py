@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -6,7 +6,7 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_opportunity(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     pipeline_id: str,
     location_id: str,
     name: str,
@@ -15,8 +15,8 @@ async def create_opportunity(
     pipeline_stage_id: str = None,
     monetary_value: float = None,
     assigned_to: str = None,
-    custom_fields: List[Dict[str, Any]] = None
-) -> Dict[str, Any]:
+    custom_fields: list[dict[str, Any]] = None
+) -> dict[str, Any]:
     """
     Create an opportunity in Go High Level.
 
@@ -30,7 +30,7 @@ async def create_opportunity(
         pipeline_stage_id: The ID of the pipeline stage (optional)
         monetary_value: The monetary value of the opportunity (optional)
         assigned_to: The ID of the user the opportunity is assigned to (optional)
-        custom_fields: List of custom fields (optional)
+        custom_fields: list of custom fields (optional)
 
     Returns:
         Dictionary containing the created opportunity data

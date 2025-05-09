@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -9,13 +9,13 @@ async def update_email_template(
     location_id: str,
     template_id: str,
     updated_by: str,
-    headers: Dict[str, str],
-    dnd: Dict[str, Any],
+    headers: dict[str, str],
+    dnd: dict[str, Any],
     html: str = "",
     editor_type: str = "html",
-    preview_text: Optional[str] = None,
+    preview_text: str | None,
     is_plain_text: bool = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update an email template in Go High Level.
     

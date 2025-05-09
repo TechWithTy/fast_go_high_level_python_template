@@ -1,26 +1,26 @@
 import aiohttp
 import json
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 
 async def create_invoice_template(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location",
     internal: bool = True,
     name: str = "New Template",
-    business_details: Optional[Dict[str, Any]] = None,
+    business_details: dict[str, Any] = None,
     currency: str = "USD",
-    items: Optional[List[Dict[str, Any]]] = None,
+    items: Optional[list[dict[str, Any]]] = None,
     automatic_taxes_enabled: bool = True,
-    discount: Optional[Dict[str, Any]] = None,
-    terms_notes: Optional[str] = None,
-    title: Optional[str] = None,
-    tips_configuration: Optional[Dict[str, Any]] = None,
-    late_fees_configuration: Optional[Dict[str, Any]] = None,
-    invoice_number_prefix: Optional[str] = None,
-    payment_methods: Optional[Dict[str, Any]] = None,
-    attachments: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    discount: dict[str, Any] = None,
+    terms_notes: str | None,
+    title: str | None,
+    tips_configuration: dict[str, Any] = None,
+    late_fees_configuration: dict[str, Any] = None,
+    invoice_number_prefix: str | None,
+    payment_methods: dict[str, Any] = None,
+    attachments: list[str] | None = None
+) -> dict[str, Any]:
     url = "https://services.leadconnectorhq.com/invoices/template"
     
     payload = {

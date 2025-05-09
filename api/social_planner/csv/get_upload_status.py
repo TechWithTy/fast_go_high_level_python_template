@@ -1,17 +1,17 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_upload_status(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     include_users: Optional[bool] = None,
     limit: int = 10,
     skip: int = 0,
-    user_id: Optional[str] = None
-) -> Dict[str, Any]:
+    user_id: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/csv"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

@@ -1,21 +1,21 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-04-15"
 
-async def pause_sub_account(location_id: str, headers: Dict[str, str], paused: bool, company_id: str) -> Dict[str, Any]:
+async def pause_sub_account(location_id: str, headers: dict[str, str], paused: bool, company_id: str) -> dict[str, Any]:
     """
     Pause Sub account for given locationId.
 
     Args:
         location_id (str): The ID of the location to pause.
-        headers (Dict[str, str]): The headers containing the authorization token.
+        headers (dict[str, str]): The headers containing the authorization token.
         paused (bool): Whether to pause the sub account.
         company_id (str): The ID of the company.
 
     Returns:
-        Dict[str, Any]: The response from the API.
+        dict[str, Any]: The response from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

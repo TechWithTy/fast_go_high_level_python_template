@@ -1,4 +1,4 @@
-from typing import List, Dict, Union
+from typing  dict, Union
 
 class ContactDndUpdate:
     """
@@ -6,7 +6,7 @@ class ContactDndUpdate:
     Called whenever a contact's dnd field is updated.
     """
 
-    def __init__(self, data: Dict[str, Union[str, bool, Dict, List]]):
+    def __init__(self, data: dict[str, Union[str, bool, dict, list]]):
         self.type: str = data["type"]
         self.location_id: str = data["locationId"]
         self.id: str = data["id"]
@@ -19,18 +19,18 @@ class ContactDndUpdate:
         self.date_added: str = data["dateAdded"]
         self.date_of_birth: str = data.get("dateOfBirth", "")
         self.dnd: bool = data["dnd"]
-        self.dnd_settings: Dict[str, Dict[str, str]] = data["dndSettings"]
+        self.dnd_settings: dict[str, dict[str, str]] = data["dndSettings"]
         self.email: str = data.get("email", "")
         self.name: str = data.get("name", "")
         self.first_name: str = data.get("firstName", "")
         self.last_name: str = data.get("lastName", "")
         self.phone: str = data.get("phone", "")
         self.postal_code: str = data.get("postalCode", "")
-        self.tags: List[str] = data.get("tags", [])
+        self.tags: list[str] = data.get("tags", [])
         self.website: str = data.get("website", "")
-        self.attachments: List = data.get("attachments", [])
+        self.attachments: list = data.get("attachments", [])
         self.assigned_to: str = data.get("assignedTo", "")
-        self.custom_fields: List[Dict[str, Union[str, int, List, Dict]]] = data.get("customFields", [])
+        self.custom_fields: list[dict[str, Union[str, int, list, dict]]] = data.get("customFields", [])
 
     def __str__(self):
         return f"ContactDndUpdate(id={self.id}, name={self.name}, dnd={self.dnd})"

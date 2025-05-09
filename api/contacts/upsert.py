@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,30 +6,30 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def upsert_contact(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    first_name: Optional[str] = None,
-    last_name: Optional[str] = None,
-    name: Optional[str] = None,
-    email: Optional[str] = None,
-    gender: Optional[str] = None,
-    phone: Optional[str] = None,
-    address1: Optional[str] = None,
-    city: Optional[str] = None,
-    state: Optional[str] = None,
-    postal_code: Optional[str] = None,
-    website: Optional[str] = None,
-    timezone: Optional[str] = None,
+    first_name: str | None,
+    last_name: str | None,
+    name: str | None,
+    email: str | None,
+    gender: str | None,
+    phone: str | None,
+    address1: str | None,
+    city: str | None,
+    state: str | None,
+    postal_code: str | None,
+    website: str | None,
+    timezone: str | None,
     dnd: Optional[bool] = None,
-    dnd_settings: Optional[Dict[str, Any]] = None,
-    inbound_dnd_settings: Optional[Dict[str, Any]] = None,
-    tags: Optional[List[str]] = None,
-    custom_fields: Optional[List[Dict[str, str]]] = None,
-    source: Optional[str] = None,
-    country: Optional[str] = None,
-    company_name: Optional[str] = None,
-    assigned_to: Optional[str] = None,
-) -> Dict[str, Any]:
+    dnd_settings: dict[str, Any] = None,
+    inbound_dnd_settings: dict[str, Any] = None,
+    tags: list[str] | None = None,
+    custom_fields: Optional[list[dict[str, str]]] = None,
+    source: str | None,
+    country: str | None,
+    company_name: str | None,
+    assigned_to: str | None,
+) -> dict[str, Any]:
     """
     Upsert a contact in Go High Level.
     

@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,8 +9,8 @@ async def get_transaction_by_id(
     alt_id: str,
     alt_type: str,
     access_token: str,
-    location_id: Optional[str] = None
-) -> Dict[str, Any]:
+    location_id: str | None
+) -> dict[str, Any]:
     """
     Get Transaction by ID
 

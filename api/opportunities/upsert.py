@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -6,7 +6,7 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def upsert_opportunity(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     pipeline_id: str,
     location_id: str,
     contact_id: str,
@@ -15,7 +15,7 @@ async def upsert_opportunity(
     pipeline_stage_id: str,
     monetary_value: float,
     assigned_to: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Upsert an opportunity in Go High Level API.
 

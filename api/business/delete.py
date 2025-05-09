@@ -1,10 +1,10 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def delete_business(business_id: str, headers: Dict[str, str]) -> Dict[str, bool]:
+async def delete_business(business_id: str, headers: dict[str, str]) -> dict[str, bool]:
     """
     Delete a business by ID using the Go High Level API.
     

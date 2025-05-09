@@ -1,9 +1,9 @@
-from typing import Dict, List, Union
+from typing , list, Union
 
 class Invoice:
     """Called whenever an invoice is marked as void"""
 
-    def __init__(self, data: Dict[str, Union[str, bool, int, float, Dict, List]]):
+    def __init__(self, data: dict[str, Union[str, bool, int, float, dict, list]]):
         self._id: str = data["_id"]
         self.status: str = data["status"]
         self.live_mode: bool = data["liveMode"]
@@ -11,23 +11,23 @@ class Invoice:
         self.alt_id: str = data["altId"]
         self.alt_type: str = data["altType"]
         self.name: str = data["name"]
-        self.business_details: Dict[str, Union[str, List[str]]] = data["businessDetails"]
+        self.business_details: dict[str, Union[str, list[str]]] = data["businessDetails"]
         self.invoice_number: str = data["invoiceNumber"]
         self.currency: str = data["currency"]
-        self.contact_details: Dict[str, Union[str, List[str], Dict]] = data["contactDetails"]
+        self.contact_details: dict[str, Union[str, list[str], dict]] = data["contactDetails"]
         self.issue_date: str = data["issueDate"]
         self.due_date: str = data["dueDate"]
-        self.discount: Dict[str, Union[str, float]] = data["discount"]
-        self.invoice_items: List[Dict[str, Union[str, int, float, List]]] = data["invoiceItems"]
+        self.discount: dict[str, Union[str, float]] = data["discount"]
+        self.invoice_items: list[dict[str, Union[str, int, float, list]]] = data["invoiceItems"]
         self.total: float = data["total"]
         self.title: str = data["title"]
         self.amount_due: float = data["amountDue"]
         self.created_at: str = data["createdAt"]
         self.updated_at: str = data["updatedAt"]
-        self.total_summary: Dict[str, float] = data["totalSummary"]
+        self.total_summary: dict[str, float] = data["totalSummary"]
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Union[str, bool, int, float, Dict, List]]) -> 'Invoice':
+    def from_dict(cls, data: dict[str, Union[str, bool, int, float, dict, list]]) -> 'Invoice':
         return cls(data)
 
 # Example usage

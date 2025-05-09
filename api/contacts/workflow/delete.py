@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def delete_contact_from_workflow(
     contact_id: str,
     workflow_id: str,
-    headers: Dict[str, str],
-    event_start_time: Optional[str] = None
-) -> Dict[str, bool]:
+    headers: dict[str, str],
+    event_start_time: str | None
+) -> dict[str, bool]:
     """
     Delete a contact from a workflow in Go High Level API.
     

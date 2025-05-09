@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, BinaryIO
+from typing , Any, Optional, BinaryIO
 import httpx
 import logging
 import uuid
@@ -9,9 +9,9 @@ API_VERSION = "2021-07-28"
 async def upload_files_custom_fields(
     contact_id: str,
     location_id: str,
-    files: Dict[str, BinaryIO],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    files: dict[str, BinaryIO],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Upload files to custom fields for a contact.
     

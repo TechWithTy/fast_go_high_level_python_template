@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,26 +7,26 @@ API_VERSION = "2021-04-15"
 
 async def search_conversations(
     location_id: str,
-    headers: Dict[str, str],
-    assigned_to: Optional[str] = None,
-    contact_id: Optional[str] = None,
-    followers: Optional[str] = None,
-    conversation_id: Optional[str] = None,
-    last_message_action: Optional[str] = None,
-    last_message_direction: Optional[str] = None,
-    last_message_type: Optional[str] = None,
-    limit: Optional[int] = 20,
-    mentions: Optional[str] = None,
-    query: Optional[str] = None,
-    score_profile: Optional[str] = None,
-    score_profile_max: Optional[int] = None,
-    score_profile_min: Optional[int] = None,
-    sort: Optional[str] = None,
-    sort_by: Optional[str] = None,
-    sort_score_profile: Optional[str] = None,
+    headers: dict[str, str],
+    assigned_to: str | None,
+    contact_id: str | None,
+    followers: str | None,
+    conversation_id: str | None,
+    last_message_action: str | None,
+    last_message_direction: str | None,
+    last_message_type: str | None,
+    limit: int | None 20,
+    mentions: str | None,
+    query: str | None,
+    score_profile: str | None,
+    score_profile_max: int | None,
+    score_profile_min: int | None,
+    sort: str | None,
+    sort_by: str | None,
+    sort_score_profile: str | None,
     start_after_date: Optional[Any] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    status: str | None
+) -> dict[str, Any]:
     """
     Search conversations based on various filters.
     

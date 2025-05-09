@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,9 +8,9 @@ API_VERSION = "2021-07-28"
 async def update_note(
     contact_id: str,
     note_id: str,
-    note_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    note_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a note for a contact in Go High Level.
     

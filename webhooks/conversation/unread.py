@@ -1,9 +1,9 @@
-from typing import Dict, Union
+from typing , Union
 
 class ConversationUnreadUpdate:
     """Called whenever a conversation's unread status is updated"""
 
-    def __init__(self, data: Dict[str, Union[str, int, bool]]):
+    def __init__(self, data: dict[str, Union[str, int, bool]]):
         self.type: str = data["type"]
         self.location_id: str = data["locationId"]
         self.id: str = data["id"]
@@ -14,7 +14,7 @@ class ConversationUnreadUpdate:
         self.deleted: bool = data["deleted"]
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Union[str, int, bool]]) -> 'ConversationUnreadUpdate':
+    def from_dict(cls, data: dict[str, Union[str, int, bool]]) -> 'ConversationUnreadUpdate':
         return cls(data)
 
 # Example usage

@@ -1,12 +1,12 @@
 import httpx
 import logging
-from typing import Dict, Any
+from typing , Any
 
 async def verify_email(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     email: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Verify an email address using the Go High Level API.
 

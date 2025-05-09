@@ -1,14 +1,14 @@
 import httpx
-from typing import Dict, Any
+from typing , Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def update_estimate(
     estimate_id: str,
-    headers: Dict[str, str],
-    data: Dict[str, Any]
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    data: dict[str, Any]
+) -> dict[str, Any]:
     """
     Update an existing estimate with new details.
 

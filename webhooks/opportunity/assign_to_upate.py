@@ -12,7 +12,7 @@ class OpportunityAssignedToUpdate(BaseModel):
     name: str = Field(..., description="Name of the opportunity")
     pipelineId: str = Field(..., description="ID of the pipeline")
     pipelineStageId: str = Field(..., description="ID of the pipeline stage")
-    source: Optional[str] = Field(None, description="Source of the opportunity")
+    source: str | None = Field(None, description="Source of the opportunity")
     status: str = Field(..., description="Status of the opportunity")
     dateAdded: datetime = Field(..., description="Date and time when the opportunity was added")
 

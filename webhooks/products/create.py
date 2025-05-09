@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+
 from datetime import datetime
 
 class Option(BaseModel):
@@ -9,7 +9,7 @@ class Option(BaseModel):
 class Variant(BaseModel):
     id: str
     name: str
-    options: List[Option]
+    options: list[Option]
 
 class Media(BaseModel):
     id: str
@@ -21,8 +21,8 @@ class Media(BaseModel):
 class Product(BaseModel):
     _id: str
     description: str
-    variants: List[Variant]
-    medias: List[Media]
+    variants: list[Variant]
+    medias: list[Media]
     locationId: str
     name: str
     productType: str

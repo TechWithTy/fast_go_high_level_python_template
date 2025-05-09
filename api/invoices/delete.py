@@ -1,5 +1,5 @@
 # backend/apps/go_high_level/api/invoices/delete.py
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -10,8 +10,8 @@ async def delete_invoice(
     invoice_id: str, 
     alt_id: str, 
     alt_type: str, 
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Delete an invoice by invoice ID.
     

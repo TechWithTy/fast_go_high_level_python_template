@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
@@ -8,10 +8,10 @@ API_VERSION = "2021-07-28"
 async def update_custom_value(
     location_id: str,
     custom_value_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     name: str,
     value: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update a custom value in Go High Level.
 

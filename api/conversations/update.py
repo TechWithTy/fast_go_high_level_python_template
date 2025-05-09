@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,9 +7,9 @@ API_VERSION = "2021-04-15"
 
 async def update_conversation(
     conversation_id: str,
-    conversation_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    conversation_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Update a conversation in Go High Level.
     

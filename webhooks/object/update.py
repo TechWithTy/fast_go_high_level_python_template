@@ -1,6 +1,6 @@
 
 from pydantic import BaseModel, Field
-from typing import List, Optional
+
 from datetime import datetime
 
 class Labels(BaseModel):
@@ -14,7 +14,7 @@ class ObjectSchemaUpdate(BaseModel):
     id: str
     labels: Labels
     description: str
-    searchableProperties: List[str]
+    searchableProperties: list[str]
     primaryDisplayProperty: str
     key: str
     locationId: str

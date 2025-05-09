@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,20 +6,20 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def list_invoices(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str = "location",
     limit: int = 10,
     offset: int = 0,
-    contact_id: Optional[str] = None,
-    end_at: Optional[str] = None,
-    payment_mode: Optional[str] = None,
-    search: Optional[str] = None,
-    sort_field: Optional[str] = None,
-    sort_order: Optional[str] = None,
-    start_at: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    contact_id: str | None,
+    end_at: str | None,
+    payment_mode: str | None,
+    search: str | None,
+    sort_field: str | None,
+    sort_order: str | None,
+    start_at: str | None,
+    status: str | None
+) -> dict[str, Any]:
     """
     Get list of invoices.
     

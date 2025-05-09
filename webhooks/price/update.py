@@ -1,4 +1,4 @@
-from typing import List, Optional
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -13,8 +13,8 @@ class Recurring(BaseModel):
 
 class PriceUpdate(BaseModel):
     _id: str
-    membershipOffers: List[MembershipOffer]
-    variantOptionIds: List[str]
+    membershipOffers: list[MembershipOffer]
+    variantOptionIds: list[str]
     locationId: str
     product: str
     userId: str

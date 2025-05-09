@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -10,12 +10,12 @@ async def create_calendar_resource(
     location_id: str,
     name: str,
     description: str,
-    headers: Dict[str, str],
-    quantity: Optional[int] = None,
-    out_of_service: Optional[int] = None,
-    capacity: Optional[int] = None,
-    calendar_ids: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    quantity: int | None,
+    out_of_service: int | None,
+    capacity: int | None,
+    calendar_ids: list[str] | None = None
+) -> dict[str, Any]:
     """
     Create a calendar resource in Go High Level.
     

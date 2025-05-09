@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -9,7 +9,7 @@ async def set_google_business_locations(
     location_id: str,
     account_id: str,
     company_id: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/oauth/{location_id}/google/locations/{account_id}"
 
     headers = {

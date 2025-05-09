@@ -1,11 +1,11 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def create_tag(location_id: str, tag_name: str, headers: Dict[str, str]) -> Dict[str, Any]:
+async def create_tag(location_id: str, tag_name: str, headers: dict[str, str]) -> dict[str, Any]:
     """
     Create a new tag for a specific location using the Go High Level API.
 

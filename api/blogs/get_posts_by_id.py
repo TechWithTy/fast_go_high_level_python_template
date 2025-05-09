@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,14 +6,14 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_blog_posts_by_id(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     blog_id: str,
     location_id: str,
     limit: int,
     offset: int,
-    search_term: Optional[str] = None,
-    status: Optional[str] = None
-) -> Dict[str, Any]:
+    search_term: str | None,
+    status: str | None
+) -> dict[str, Any]:
     """
     Get blog posts by Blog ID from the Go High Level API.
 

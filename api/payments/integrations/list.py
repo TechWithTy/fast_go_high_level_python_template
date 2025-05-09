@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,9 +8,9 @@ async def list_white_label_integration_providers(
     access_token: str,
     alt_id: str,
     alt_type: str = "location",
-    limit: Optional[int] = None,
-    offset: Optional[int] = None
-) -> Dict[str, Any]:
+    limit: int | None,
+    offset: int | None
+) -> dict[str, Any]:
     """
     Retrieve a paginated list of white-label integration providers.
 
@@ -22,7 +22,7 @@ async def list_white_label_integration_providers(
         offset (int, optional): The starting index of the page.
 
     Returns:
-        Dict[str, Any]: A dictionary containing the list of integration providers.
+        dict[str, Any]: A dictionary containing the list of integration providers.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -6,9 +6,9 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def create_custom_field(
-    field_data: Dict[str, Any],
-    headers: Dict[str, str]
-) -> Dict[str, Any]:
+    field_data: dict[str, Any],
+    headers: dict[str, str]
+) -> dict[str, Any]:
     """
     Create a custom field in Go High Level.
     

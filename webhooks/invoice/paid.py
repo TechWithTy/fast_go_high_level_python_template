@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Dict, List
+from typing , list
 
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
@@ -13,7 +13,7 @@ class BusinessDetails(BaseModel):
     phoneNo: str
     website: str
     logoUrl: str
-    customValues: List[str]
+    customValues: list[str]
 
 class Address(BaseModel):
     countryCode: str
@@ -30,10 +30,10 @@ class ContactDetails(BaseModel):
     id: str
     phoneNo: str
     email: str
-    customFields: List[str]
+    customFields: list[str]
     name: str
     address: Address
-    additionalEmails: List[AdditionalEmail]
+    additionalEmails: list[AdditionalEmail]
     companyName: str
 
 class Discount(BaseModel):
@@ -41,7 +41,7 @@ class Discount(BaseModel):
     value: float
 
 class InvoiceItem(BaseModel):
-    taxes: List[Dict]
+    taxes: list[dict]
     _id: str
     productId: str
     priceId: str
@@ -69,7 +69,7 @@ class Invoice(BaseModel):
     issueDate: str
     dueDate: str
     discount: Discount
-    invoiceItems: List[InvoiceItem]
+    invoiceItems: list[InvoiceItem]
     total: float
     title: str
     amountDue: float

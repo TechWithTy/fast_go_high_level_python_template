@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -6,19 +6,19 @@ API_VERSION = "2021-07-28"
 
 async def update_invoice_template(
     template_id: str,
-    headers: Dict[str, str],
-    data: Dict[str, Any]
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    data: dict[str, Any]
+) -> dict[str, Any]:
     """
     Update an invoice template by template ID.
 
     Args:
         template_id (str): The ID of the template to update.
-        headers (Dict[str, str]): Headers containing Authorization and Version.
-        data (Dict[str, Any]): The data to update the template with.
+        headers (dict[str, str]): Headers containing Authorization and Version.
+        data (dict[str, Any]): The data to update the template with.
 
     Returns:
-        Dict[str, Any]: The updated template data.
+        dict[str, Any]: The updated template data.
 
     Raises:
         ValueError: If required headers are missing.

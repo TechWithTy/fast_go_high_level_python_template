@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,17 +6,17 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def get_media_files(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     alt_id: str,
     alt_type: str,
     sort_by: str,
     sort_order: str,
-    limit: Optional[int] = None,
-    offset: Optional[int] = None,
-    parent_id: Optional[str] = None,
-    query: Optional[str] = None,
-    file_type: Optional[str] = None
-) -> Dict[str, Any]:
+    limit: int | None,
+    offset: int | None,
+    parent_id: str | None,
+    query: str | None,
+    file_type: str | None
+) -> dict[str, Any]:
     """
     Fetch list of files and folders from the media library.
 

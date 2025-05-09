@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -6,15 +6,15 @@ API_VERSION = "2021-07-28"
 
 async def search_tasks(
     location_id: str,
-    headers: Dict[str, str],
-    contact_ids: Optional[List[str]] = None,
+    headers: dict[str, str],
+    contact_ids: list[str] | None = None,
     completed: Optional[bool] = None,
-    assigned_to: Optional[List[str]] = None,
-    query: Optional[str] = None,
+    assigned_to: list[str] | None = None,
+    query: str | None,
     limit: int = 25,
     skip: int = 0,
-    business_id: Optional[str] = None
-) -> Dict[str, Any]:
+    business_id: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/locations/{location_id}/tasks/search"
 
     if "Authorization" not in headers or not headers["Authorization"].startswith("Bearer "):

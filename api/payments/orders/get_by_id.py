@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -10,8 +10,8 @@ async def get_order_by_id(
     alt_id: str,
     alt_type: str,
     access_token: str,
-    location_id: Optional[str] = None
-) -> Dict[str, Any]:
+    location_id: str | None
+) -> dict[str, Any]:
     """
     Get Order by ID
 

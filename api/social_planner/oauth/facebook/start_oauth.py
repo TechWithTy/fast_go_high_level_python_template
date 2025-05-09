@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 from fastapi import Request, Depends, HTTPException
 from app.api.utils.oauth_scope import require_scope
@@ -7,12 +7,12 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def start_facebook_oauth(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
     user_id: str,
     page: str = "integration",
     reconnect: str = "true"
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):
         raise ValueError("Missing or invalid Authorization header. Must be in format: 'Bearer {token}'")
 

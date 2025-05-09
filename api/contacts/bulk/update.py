@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,19 +7,19 @@ API_VERSION = "2021-07-28"
 
 async def update_contacts_tags(
     operation_type: str,
-    contacts: List[str],
-    tags: List[str],
+    contacts: list[str],
+    tags: list[str],
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     remove_all_tags: bool = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Update tags for multiple contacts at once.
     
     Args:
         operation_type: Type of operation ('add' or 'remove')
-        contacts: List of contact IDs to process (max 500)
-        tags: List of tags to add or remove (max 50)
+        contacts: list of contact IDs to process (max 500)
+        tags: list of tags to add or remove (max 50)
         location_id: Location ID where the bulk request is executed
         headers: Dictionary containing Authorization and Version headers
         remove_all_tags: Option to remove all tags (only for 'remove' operation)

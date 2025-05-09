@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing , Any, list
 import httpx
 import logging
 
@@ -6,15 +6,15 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def set_accounts(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     location_id: str,
-    account_ids: List[str],
+    account_ids: list[str],
     file_path: str,
     rows_count: int,
     file_name: str,
     approver: str = None,
     user_id: str = None
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/social-media-posting/{location_id}/set-accounts"
 
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

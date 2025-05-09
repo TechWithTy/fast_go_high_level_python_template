@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -8,12 +8,12 @@ API_VERSION = "2021-07-28"
 async def update_record(
     schema_key: str,
     record_id: str,
-    properties: Dict[str, Any],
+    properties: dict[str, Any],
     location_id: str,
-    headers: Dict[str, str],
-    owner: Optional[List[str]] = None,
-    followers: Optional[List[str]] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    owner: list[str] | None = None,
+    followers: list[str] | None = None
+) -> dict[str, Any]:
     """
     Update a Custom Object Record by Id. Supported Objects are business and custom objects.
     
@@ -27,7 +27,7 @@ async def update_record(
         followers: Follower (User's ids). Limited to 10 for now
         
     Returns:
-        Dict containing the updated record information
+        dict containing the updated record information
     """
     url = f"{API_BASE_URL}/objects/{schema_key}/records/{record_id}"
     

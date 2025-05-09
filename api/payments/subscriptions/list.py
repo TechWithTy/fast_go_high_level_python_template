@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -8,19 +8,19 @@ async def list_subscriptions(
     access_token: str,
     alt_id: str,
     alt_type: str,
-    contact_id: Optional[str] = None,
-    end_at: Optional[str] = None,
-    entity_id: Optional[str] = None,
-    entity_source_type: Optional[str] = None,
-    subscription_id: Optional[str] = None,
+    contact_id: str | None,
+    end_at: str | None,
+    entity_id: str | None,
+    entity_source_type: str | None,
+    subscription_id: str | None,
     limit: int = 10,
     offset: int = 0,
-    payment_mode: Optional[str] = None,
-    search: Optional[str] = None,
-    start_at: Optional[str] = None
-) -> Dict[str, Any]:
+    payment_mode: str | None,
+    search: str | None,
+    start_at: str | None
+) -> dict[str, Any]:
     """
-    List subscriptions from the Go High Level API.
+    list subscriptions from the Go High Level API.
 
     Args:
         access_token: The access token for authentication

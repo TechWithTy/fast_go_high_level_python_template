@@ -1,4 +1,4 @@
-from typing import Dict, Any, BinaryIO
+from typing , Any, BinaryIO
 import httpx
 import logging
 
@@ -7,11 +7,11 @@ API_VERSION = "2021-07-28"
 
 async def upload_file_to_custom_fields(
     location_id: str,
-    files: Dict[str, BinaryIO],
-    headers: Dict[str, str],
+    files: dict[str, BinaryIO],
+    headers: dict[str, str],
     id: str = None,
     max_files: int = None
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Upload files to custom fields in Go High Level.
 

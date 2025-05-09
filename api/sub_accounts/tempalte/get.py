@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -7,13 +7,13 @@ API_VERSION = "2021-07-28"
 
 async def get_templates(
     location_id: str,
-    headers: Dict[str, str],
+    headers: dict[str, str],
     origin_id: str,
     deleted: bool = False,
     limit: int = 25,
     skip: int = 0,
-    template_type: Optional[str] = None
-) -> Dict[str, Any]:
+    template_type: str | None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/locations/{location_id}/templates"
 
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

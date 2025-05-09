@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Optional
+from typing , Any, list, Optional
 import httpx
 import logging
 
@@ -7,11 +7,11 @@ API_VERSION = "2021-04-15"
 
 async def get_messages_by_conversation_id(
     conversation_id: str,
-    headers: Dict[str, str],
-    last_message_id: Optional[str] = None,
-    limit: Optional[int] = 20,
-    message_type: Optional[str] = None
-) -> Dict[str, Any]:
+    headers: dict[str, str],
+    last_message_id: str | None,
+    limit: int | None 20,
+    message_type: str | None
+) -> dict[str, Any]:
     """
     Get messages by conversation ID from the Go High Level API.
     

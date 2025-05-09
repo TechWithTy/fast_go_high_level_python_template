@@ -1,4 +1,4 @@
-from typing import Dict, Any
+from typing , Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
@@ -13,7 +13,7 @@ async def create_white_label_integration_provider(
     provider: str,
     description: str,
     image_url: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Create a White-label Integration Provider.
 
@@ -28,7 +28,7 @@ async def create_white_label_integration_provider(
         image_url (str): The URL to an image representing the integration provider.
 
     Returns:
-        Dict[str, Any]: The response data from the API.
+        dict[str, Any]: The response data from the API.
 
     Raises:
         httpx.HTTPStatusError: If the API request fails.

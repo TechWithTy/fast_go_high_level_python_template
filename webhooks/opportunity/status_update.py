@@ -10,13 +10,13 @@ class OpportunityStatusUpdate(BaseModel):
     type: str = Field(..., description="Type of the webhook event")
     location_id: str = Field(..., alias="locationId")
     id: str
-    assigned_to: Optional[str] = Field(None, alias="assignedTo")
-    contact_id: Optional[str] = Field(None, alias="contactId")
-    monetary_value: Optional[float] = Field(None, alias="monetaryValue")
+    assigned_to: str | None = Field(None, alias="assignedTo")
+    contact_id: str | None = Field(None, alias="contactId")
+    monetary_value: float | None = Field(None, alias="monetaryValue")
     name: str
     pipeline_id: str = Field(..., alias="pipelineId")
     pipeline_stage_id: str = Field(..., alias="pipelineStageId")
-    source: Optional[str] = None
+    source: str | None
     status: str
     date_added: datetime = Field(..., alias="dateAdded")
 

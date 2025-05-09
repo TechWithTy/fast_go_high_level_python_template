@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional, List
+from typing , Any, Optional
 import httpx
 import logging
 
@@ -6,16 +6,16 @@ API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
 async def update_opportunity(
-    headers: Dict[str, str],
+    headers: dict[str, str],
     opportunity_id: str,
-    pipeline_id: Optional[str] = None,
-    name: Optional[str] = None,
-    pipeline_stage_id: Optional[str] = None,
-    status: Optional[str] = None,
-    monetary_value: Optional[float] = None,
-    assigned_to: Optional[str] = None,
-    custom_fields: Optional[List[Dict[str, str]]] = None
-) -> Dict[str, Any]:
+    pipeline_id: str | None,
+    name: str | None,
+    pipeline_stage_id: str | None,
+    status: str | None,
+    monetary_value: float | None = None,
+    assigned_to: str | None,
+    custom_fields: Optional[list[dict[str, str]]] = None
+) -> dict[str, Any]:
     url = f"{API_BASE_URL}/opportunities/{opportunity_id}"
     
     if not headers.get("Authorization") or not headers["Authorization"].startswith("Bearer "):

@@ -7,9 +7,9 @@ router = APIRouter()
 
 class InvoiceDeletePayload(BaseModel):
     _id: str
-    status: str | None = None
-    invoiceNumber: str | None = None
-    amountDue: str | None = None
+    status: str | None
+    invoiceNumber: str | None
+    amountDue: str | None
 
 
 @router.post("/webhooks/invoice/delete", status_code=status.HTTP_200_OK)
