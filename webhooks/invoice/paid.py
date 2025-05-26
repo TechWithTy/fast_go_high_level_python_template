@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing , list
+from typing  list
 
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse

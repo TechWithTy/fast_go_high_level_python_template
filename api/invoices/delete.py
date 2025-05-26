@@ -1,5 +1,5 @@
 # backend/apps/go_high_level/api/invoices/delete.py
-from typing , Any
+from typing import  Any
 import httpx
 import logging
 

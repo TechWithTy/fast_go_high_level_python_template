@@ -1,7 +1,7 @@
-from typing , Any
+from typing import  Any
 import httpx
 import logging
-from app.caching.utils.redis_cache import invalidate_cache
+
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
@@ -50,10 +50,7 @@ async def delete_sub_account(
             response = await client.delete(url, headers=request_headers, params=params)
             response.raise_for_status()
             
-            # Invalidate relevant caches
-            await invalidate_cache(f"{cache_key_prefix}:{location_id}")
-            await invalidate_cache(f"{cache_key_prefix}:list")
-            
+    
             return response.json()
     except httpx.HTTPStatusError as e:
         logging.error(f"HTTP error occurred: {e}")

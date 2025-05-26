@@ -1,5 +1,5 @@
 import httpx
-from typing  dict, Optional
+, Optional
 from datetime import datetime
 
 async def update_schedule(schedule_id: str, headers: dict[str, str], alt_id: str, alt_type: str, name: str,

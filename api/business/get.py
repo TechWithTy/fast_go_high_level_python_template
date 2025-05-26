@@ -1,6 +1,6 @@
 import httpx
 import logging
-from typing , Any
+from typing import  Any
 
 async def get_business(business_id: str, headers: dict[str, str]) -> dict[str, Any]:
     """

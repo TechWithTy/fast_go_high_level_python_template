@@ -1,4 +1,4 @@
-from typing , Any
+from typing import  Any
 import httpx
 
 API_BASE_URL = "https://services.leadconnectorhq.com"

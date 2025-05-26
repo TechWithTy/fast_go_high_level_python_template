@@ -1,4 +1,4 @@
-from typing  dict, Union
+, Union
 
 class ContactTagUpdate:
     """Called whenever a contact's tag field is updated"""

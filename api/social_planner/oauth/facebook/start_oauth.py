@@ -1,4 +1,4 @@
-from typing , Any
+from typing import  Any
 import httpx
 from fastapi import Request, Depends, HTTPException
 from app.api.utils.oauth_scope import require_scope

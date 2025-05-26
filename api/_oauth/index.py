@@ -1,6 +1,6 @@
 import os
 import requests
-from typing , Any
+from typing import  Any
 
 BASE_URL = "https://api.gohighlevel.com/v1"
 
