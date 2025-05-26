@@ -1,4 +1,4 @@
-from typing , Any, list, Optional
+from typing import  Any, Optional
 import requests
 
 def update_calendar_resource(

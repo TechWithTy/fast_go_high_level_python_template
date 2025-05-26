@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing  dict
+
 from datetime import datetime
 
 class Property(BaseModel):

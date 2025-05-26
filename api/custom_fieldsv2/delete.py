@@ -1,5 +1,5 @@
 # backend/apps/go_high_level/api/custom_fieldsv2/delete.py
-from typing , Any
+from typing import  Any
 import httpx
 import logging
 

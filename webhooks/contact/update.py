@@ -1,4 +1,4 @@
-from typing ,Union
+from typing Union
 
 class ContactUpdate:
     """Called whenever specific fields in a contact are updated"""

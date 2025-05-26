@@ -1,4 +1,4 @@
-from typing , list, Union
+from typing  list, Union
 
 class Invoice:
     """Called whenever an invoice is marked as void"""

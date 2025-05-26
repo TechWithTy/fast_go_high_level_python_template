@@ -1,5 +1,5 @@
 import httpx
-from typing , Any
+from typing import  Any
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"

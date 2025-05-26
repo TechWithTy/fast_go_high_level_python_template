@@ -1,4 +1,4 @@
-from typing ,Union
+from typing Union
 
 class Contact:
     """Called whenever a contact is deleted"""

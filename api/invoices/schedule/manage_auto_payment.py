@@ -1,5 +1,5 @@
 import httpx
-from typing , Any
+from typing import  Any
 
 async def manage_auto_payment(schedule_id: str, alt_id: str, alt_type: str, auto_payment: dict[str, Any], headers: dict[str, str]) -> dict[str, Any]:
     url = f"https://services.leadconnectorhq.com/invoices/schedule/{schedule_id}/auto-payment"

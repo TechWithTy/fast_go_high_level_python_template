@@ -1,4 +1,4 @@
-from typing  dict, Union
+, Union
 
 class Contact:
     """Called whenever a contact is created"""

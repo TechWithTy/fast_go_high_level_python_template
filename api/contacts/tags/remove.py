@@ -1,11 +1,11 @@
-from typing , Any, list
+from typing import  Any
 import httpx
 import logging
 
 API_BASE_URL = "https://services.leadconnectorhq.com"
 API_VERSION = "2021-07-28"
 
-async def remove_contact_tags(
+async def remove_tags_from_contact(
     contact_id: str,
     tags: list[str],
     headers: dict[str, str]

@@ -1,6 +1,6 @@
 import httpx
 import logging
-from typing , Any
+from typing import  Any
 
 async def verify_email(
     headers: dict[str, str],

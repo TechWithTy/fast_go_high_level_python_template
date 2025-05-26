@@ -1,5 +1,5 @@
 import requests
-from typing  dict, Optional
+, Optional
 from datetime import datetime
 
 def create_invoice_schedule(

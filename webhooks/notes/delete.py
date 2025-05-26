@@ -1,4 +1,4 @@
-from typing , Any
+from typing import  Any
 from datetime import datetime
 
 class NoteDelete:

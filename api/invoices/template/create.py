@@ -1,6 +1,6 @@
 import aiohttp
 import json
-from typing , Any, Optional
+from typing import  Any, Optional
 
 async def create_invoice_template(
     headers: dict[str, str],

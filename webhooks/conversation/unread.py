@@ -1,4 +1,4 @@
-from typing , Union
+from typing  Union
 
 class ConversationUnreadUpdate:
     """Called whenever a conversation's unread status is updated"""
